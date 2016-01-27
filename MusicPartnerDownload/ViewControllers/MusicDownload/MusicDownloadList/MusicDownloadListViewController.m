@@ -40,6 +40,8 @@
     self.dataSource.downloadStatusChangeBlock = ^(TaskDownloadState mpDownloadState,NSString *downLoadUrlString){
         [weakSelf.mainTableView reloadData];
     };
+    
+    [self.mainTableView setTableFooterView:[[UIView alloc ] init]];
 }
 
 
@@ -86,29 +88,6 @@
     return musicListCell;
 }
 
-
-
-
-//
-//-(void)downLoad:(MusicDownloadListTableCell *)cell s:(NSString *)downLoadString{
-//
-//        
-//        [[MusicPartnerDownloadManager sharedInstance] downLoad:downLoadString progressBlock:^(CGFloat progress, CGFloat totalMBRead, CGFloat totalMBExpectedToRead) {
-//            
-//            dispatch_async(dispatch_get_main_queue(), ^{
-//                cell.musicDownloadProgress.progress = progress;
-//                cell.musicDownloadPercent.text = @(progress).stringValue;
-//            });
-//            
-//        } completeBlock:^(MPDownloadState mpDownloadState,NSString *downLoadUrlString) {
-//            dispatch_async(dispatch_get_main_queue(), ^{
-//                [cell.stopStartBtn setTitle:[MusicDownloadListTableCell getTitleWithDownloadState:mpDownloadState] forState:UIControlStateNormal];
-//                
-//                
-//            });
-//        }];
-//  
-//}
 
 
 - (void)didReceiveMemoryWarning {

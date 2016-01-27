@@ -34,6 +34,9 @@
                   @"http://pic6.nipic.com/20100330/4592428_113348097000_2.jpg"];
     
     [[MusicPartnerDownloadManager sharedInstance] initUnFinishedTask];
+    
+    [self.mainTableView setTableFooterView:[[UIView alloc ] init]];
+    
 }
 
 
