@@ -56,6 +56,11 @@
 - (void)deleteFile:(NSString *)url;
 
 /**
+ *  删除所有的任务
+ */
+-(void)deleAllTask;
+
+/**
  *  判断该文件是否下载完成
  */
 - (BOOL)isCompletion:(NSString *)url;

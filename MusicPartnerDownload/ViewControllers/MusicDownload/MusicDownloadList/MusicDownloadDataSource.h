@@ -31,5 +31,6 @@ typedef void(^DownloadStatusChangeBlock)(TaskDownloadState mpDownloadState,NSStr
  */
 -(void)startDownLoadUnFinishedTasks;
 
+-(void)deleAllTask;
 
 @end

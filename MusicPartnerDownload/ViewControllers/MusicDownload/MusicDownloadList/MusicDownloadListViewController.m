@@ -13,6 +13,7 @@
 @interface MusicDownloadListViewController ()
 
 @property (nonatomic , strong) MusicDownloadDataSource *dataSource;
+- (IBAction)deleAll:(UIBarButtonItem *)sender;
 
 @end
 
@@ -37,9 +38,7 @@
     
     __weak typeof(self) weakSelf = self;
     self.dataSource.downloadStatusChangeBlock = ^(TaskDownloadState mpDownloadState,NSString *downLoadUrlString){
-        if (mpDownloadState == TasktateCompleted) {
-            [weakSelf.mainTableView reloadData];
-        }
+        [weakSelf.mainTableView reloadData];
     };
 }
 
@@ -116,4 +115,8 @@
     [super didReceiveMemoryWarning];
 }
 
+- (IBAction)deleAll:(UIBarButtonItem *)sender {
+    [self.dataSource deleAllTask];
+    
+}
 @end

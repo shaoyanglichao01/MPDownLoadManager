@@ -44,10 +44,14 @@
         MPDownloadState downLoadStatus = [self getMPDownloadState:urlKey];
         downLoadTask.mpSessionModel.mpDownloadState = downLoadStatus;
         downLoadTask.mpSessionModel.urlString = urlKey;
+        downLoadTask.mpSessionModel.extra = [dic objectForKey:@"mpDownloadExtra"];
+        
+        
         downLoadTask.delegate = self;
         [self.mpDownloadTasks setObject:downLoadTask forKey:urlKey];
     }
 }
+
 
 /**
  *  添加下载任务并下载
@@ -220,7 +224,6 @@
         }
     }
     return -1;
- 
 }
 
 //　读取本地任务
@@ -262,6 +265,15 @@
         }
     }
     return unFinishedTasks;
+}
+
+/**
+ *  删除所有的任务
+ */
+-(void)deleAllTask{
+    for (NSString *downLoadString in self.mpDownloadTasks.allKeys) {
+        [[MusicPartnerDownloadManager sharedInstance] deleteFile:downLoadString];
+    }
 }
 
 @end

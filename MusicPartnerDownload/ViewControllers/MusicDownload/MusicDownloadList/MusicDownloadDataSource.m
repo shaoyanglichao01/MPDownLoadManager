@@ -40,6 +40,15 @@
     return (TaskDownloadState)state;
 }
 
+-(void)deleAllTask{
+    [[MusicPartnerDownloadManager sharedInstance] deleAllTask];
+    [self loadUnFinishedTasks];
+    
+    if (self.downloadStatusChangeBlock) {
+        self.downloadStatusChangeBlock(0,nil);
+    }
+}
+
 /**
  *  开始下载未完成的任务 1.之前的状态是正在下载的则继续下载。否则暂停下载
  */
