@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bw8-oH-Vvx">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Music Download List View Controller-->
+        <scene sceneID="U5Z-Wn-cn1">
+            <objects>
+                <viewController storyboardIdentifier="MusicDownloadListViewController" id="bw8-oH-Vvx" customClass="MusicDownloadListViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Cqk-iT-66C"/>
+                        <viewControllerLayoutGuide type="bottom" id="uKq-bF-eRD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yqU-0A-5H3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ezz-Ff-XSt">
+                                <rect key="frame" x="5" y="5" width="310" height="558"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MusicDownloadListTableCell" rowHeight="50" id="2yt-H9-vl1" customClass="MusicDownloadListTableCell">
+                                        <rect key="frame" x="0.0" y="28" width="310" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2yt-H9-vl1" id="KuR-5a-w2t">
+                                            <rect key="frame" x="0.0" y="0.0" width="310" height="49"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I Don't Know" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rfH-4L-2Vn">
+                                                    <rect key="frame" x="16" y="8" width="161" height="15"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rp6-At-4jO">
+                                                    <rect key="frame" x="16" y="36" width="161" height="2"/>
+                                                </progressView>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KGL-EJ-4x7">
+                                                    <rect key="frame" x="248" y="8" width="43" height="30"/>
+                                                    <state key="normal" title="stop"/>
+                                                    <connections>
+                                                        <action selector="stopStartAction:" destination="2yt-H9-vl1" eventType="touchUpInside" id="s8E-lq-TzC"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xrP-tg-vaL">
+                                                    <rect key="frame" x="192" y="15" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="musicDownloadPercent" destination="xrP-tg-vaL" id="rYq-Fi-lfe"/>
+                                            <outlet property="musicDownloadProgress" destination="rp6-At-4jO" id="9F0-2i-ojo"/>
+                                            <outlet property="musicName" destination="rfH-4L-2Vn" id="pXc-cJ-51s"/>
+                                            <outlet property="stopStartBtn" destination="KGL-EJ-4x7" id="hIV-G5-plU"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="bw8-oH-Vvx" id="3vh-Rv-RoY"/>
+                                    <outlet property="delegate" destination="bw8-oH-Vvx" id="6UE-qi-irc"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="mainTableView" destination="ezz-Ff-XSt" id="RCk-yI-YY6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BCu-nG-VMO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="290" y="385"/>
+        </scene>
+    </scenes>
+</document>
