@@ -13,7 +13,7 @@
 @interface MusicPartnerDownloadManager : NSObject
 
 // 所有下载的数据状态
-@property (nonatomic, strong) NSMutableDictionary *mpDownloadDic;
+@property (nonatomic, strong) NSMutableArray *mpDownloadArray;
 
 /**
  *  单例
@@ -68,11 +68,11 @@
 -(NSString *)getDownLoadPath;
 
 /**
- *  下载任务
+ *  读取所有的任务
  *
  *  @return
  */
--(NSMutableDictionary *)loadDownLoadTask;
+-(NSMutableArray *)loadDownLoadTask;
 
 
 /**

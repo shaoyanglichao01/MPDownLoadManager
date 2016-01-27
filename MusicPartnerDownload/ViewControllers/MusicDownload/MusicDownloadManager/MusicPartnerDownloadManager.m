@@ -32,7 +32,7 @@
 
 -(id)init{
     self.mpDownloadTasks = [[NSMutableDictionary alloc ] init];
-    self.mpDownloadDic   = [self loadDownLoadTask];
+    self.mpDownloadArray   = [self loadDownLoadTask];
     return [super init];
     
 }
@@ -174,15 +174,18 @@
     MusicPartnerDownloadTask *downLoadTask = [self getDownLoadTask:url];
     [downLoadTask deleteFile:url];
     [self.mpDownloadTasks removeObjectForKey:url];
-    
     [self deleteMpDownLoadTask:url];
 }
 
 //　删除本地
 -(void)deleteMpDownLoadTask:(NSString *)url{
     NSString *filename = [self filePathWithFileName:mpDownLoadTask];
-    [self.mpDownloadDic removeObjectForKey:url];
-    [self.mpDownloadDic writeToFile:filename atomically:NO];
+    
+    NSInteger index = [self isExit:url];
+    if (index != -1) {
+        [self.mpDownloadArray removeObjectAtIndex:index];
+    }
+    [self.mpDownloadArray writeToFile:filename atomically:NO];
 }
 
 
@@ -195,20 +198,39 @@
         [mpSession setObject:@(downLoadTask.mpSessionModel.mpDownloadState) forKey:@"mpDownloadState"];
         [mpSession setObject:string         forKey:@"mpDownloadUrlString"];
         [mpSession setObject:downLoadTask.mpSessionModel.extra forKey:@"mpDownloadExtra"];
-        [self.mpDownloadDic setObject:mpSession forKey:string];
+        
+        
+        NSInteger index = [self isExit:string];
+        if (index == -1) {
+            [self.mpDownloadArray addObject:mpSession];
+        }else{
+            [self.mpDownloadArray replaceObjectAtIndex:index withObject:mpSession];
+        }
     }
-  
-    [self.mpDownloadDic writeToFile:filename atomically:NO];
+    [self.mpDownloadArray writeToFile:filename atomically:NO];
+}
+
+-(NSInteger)isExit:(NSString *)urlString{
+    
+    for (NSInteger i = 0; i < self.mpDownloadArray.count; i ++) {
+        NSDictionary *dic = self.mpDownloadArray[i];
+        NSString *url = [dic objectForKey:@"mpDownloadUrlString"];
+        if ([url isEqualToString:urlString]) {
+            return i;
+        }
+    }
+    return -1;
+ 
 }
 
 //　读取本地任务
--(NSMutableDictionary *)loadDownLoadTask{
+-(NSMutableArray *)loadDownLoadTask{
     NSString *filename = [self filePathWithFileName:mpDownLoadTask];
-    NSDictionary *dic = [[NSDictionary alloc] initWithContentsOfFile:filename];
+    NSMutableArray *dic = [[NSMutableArray alloc] initWithContentsOfFile:filename];
     if (dic == nil) {
-        return [[NSMutableDictionary alloc ] init];
+        return [[NSMutableArray alloc ] init];
     }
-    return [NSMutableDictionary dictionaryWithDictionary:dic];
+    return dic;
 }
 
 -(NSString *)filePathWithFileName:(NSString *)fileName
@@ -221,10 +243,9 @@
 
 
 -(NSArray *)loadUnFinishedTask{
-    
-    NSMutableDictionary *dicTask = [self loadDownLoadTask];
+
     NSMutableArray *unFinishedTasks = [[NSMutableArray alloc ] init];
-    for (NSDictionary *dicMsg in dicTask.allValues) {
+    for (NSDictionary *dicMsg in [self loadDownLoadTask]) {
         if (![[dicMsg objectForKey:@"mpDownloadState"] isEqualToNumber:@(3)]) {
             [unFinishedTasks addObject:dicMsg];
         }
@@ -233,9 +254,9 @@
 }
 
 -(NSArray *)loadFinishedTask{
-    NSMutableDictionary *dicTask = [self loadDownLoadTask];
+
     NSMutableArray *unFinishedTasks = [[NSMutableArray alloc ] init];
-    for (NSDictionary *dicMsg in dicTask.allValues) {
+    for (NSDictionary *dicMsg in [self loadDownLoadTask]) {
         if ([[dicMsg objectForKey:@"mpDownloadState"] isEqualToNumber:@(3)]) {
             [unFinishedTasks addObject:dicMsg];
         }

@@ -41,7 +41,7 @@
 }
 
 /**
- *  开始下载未完成的任务
+ *  开始下载未完成的任务 1.之前的状态是正在下载的则继续下载。否则暂停下载
  */
 -(void)startDownLoadUnFinishedTasks{
     

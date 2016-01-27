@@ -8,7 +8,7 @@
 
 #import "MusicListViewController.h"
 #import "MusicListTableCell.h"
-#import "HSDownloadManager.h"
+
 #import "MusicDownloadListViewController.h"
 
 #import "MusicPartnerDownloadManager.h"
@@ -20,7 +20,6 @@
 - (IBAction)showDownLoadListAction:(UIButton *)sender;
 
 @property (nonatomic , strong) NSArray *list;
-
 
 
 @end
