@@ -59,32 +59,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     MusicDownloadListTableCell *musicListCell = [tableView dequeueReusableCellWithIdentifier:@"MusicDownloadListTableCell"];
     TaskEntity *taskEntity    = [self.dataSource.unFinishedTasks objectAtIndex:indexPath.row];
-    musicListCell.downloadUrl = taskEntity.downLoadUrl;
-    musicListCell.musicName.text = taskEntity.downLoadUrl;
-    musicListCell.musicDownloadProgress.progress = taskEntity.progress;
-    musicListCell.musicDownloadPercent.text =  [NSString stringWithFormat:@"%.3f",taskEntity.progress];
-    
-    if (taskEntity.taskDownloadState == TaskStateSuspended) {
-        [musicListCell.stopStartBtn setTitle:@"开始" forState:UIControlStateNormal];
-    }else if (taskEntity.taskDownloadState == TaskStateRunning){
-        [musicListCell.stopStartBtn setTitle:@"暂停" forState:UIControlStateNormal];
-    }
-    
-    taskEntity.progressBlock = ^(CGFloat progress, CGFloat totalMBRead, CGFloat totalMBExpectedToRead) {
-        
-            musicListCell.musicDownloadProgress.progress = progress;
-            musicListCell.musicDownloadPercent.text = [NSString stringWithFormat:@"%.3f",progress];
-      
-    };
-    
-    taskEntity.completeBlock = ^(TaskDownloadState mpDownloadState,NSString *downLoadUrlString) {
-        if (mpDownloadState == TaskStateSuspended) {
-            [musicListCell.stopStartBtn setTitle:@"开始" forState:UIControlStateNormal];
-        }else if (mpDownloadState == TaskStateRunning){
-            [musicListCell.stopStartBtn setTitle:@"暂停" forState:UIControlStateNormal];
-        }
-    };
-    
+    [musicListCell showData:taskEntity];
     return musicListCell;
 }
 

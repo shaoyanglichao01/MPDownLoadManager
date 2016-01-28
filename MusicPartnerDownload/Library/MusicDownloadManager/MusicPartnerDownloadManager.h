@@ -10,6 +10,21 @@
 #import "MusicPartnerDownloadTask.h"
 #import "MusicPartnerDownloadEntity.h"
 
+
+// 正在下载任务通知
+#define MpDownLoadingTask @"MpDownLoadingTask"
+
+// 完成下载任务通知
+#define MpDownLoadCompleteTask @"MpDownLoadCompleteTask"
+
+
+typedef enum {
+    MPTaskNoExistTask = 1,      /** 任务不存在 */
+    MPTaskExistTask   = 2,      /** 任务存在 */
+    MPTaskCompleted   = 3,      /** 下载完成 */
+}MPTaskState;
+
+
 @interface MusicPartnerDownloadManager : NSObject
 
 // 所有下载的数据状态
@@ -23,6 +38,15 @@
 + (instancetype)sharedInstance;
 
 /**
+ *  获取任务状态
+ *
+ *  @param urlString 下载地址
+ *
+ *  @return 任务状态
+ */
+-(MPTaskState)getTaskState:(NSString *)urlString;
+
+/**
  *  添加下载任务并下载
  *
  *  @param urlString 下载的地址
@@ -32,6 +56,9 @@
 -(void)downLoad:(NSString *)url progressBlock:(MPartnerDownloadProgressBlock)progressBlock completeBlock:(MPartnerDownloadCompleteBlock)completeBlock;
 
 -(void)initUnFinishedTask;
+
+// 获取正在下载的任务数量
+-(NSInteger)getDownLoadingTaskCount;
 
 /**
  *  查询该资源的下载进度值

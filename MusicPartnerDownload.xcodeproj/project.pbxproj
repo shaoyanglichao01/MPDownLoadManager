@@ -28,6 +28,9 @@
 		DD887C541C59D37D006E7A63 /* DiscoverEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = DD887C531C59D37D006E7A63 /* DiscoverEntity.m */; };
 		DD887C5A1C59D5B8006E7A63 /* Discover.plist in Resources */ = {isa = PBXBuildFile; fileRef = DD887C591C59D5B8006E7A63 /* Discover.plist */; };
 		DD887C601C59D98F006E7A63 /* panda.png in Resources */ = {isa = PBXBuildFile; fileRef = DD887C5F1C59D98F006E7A63 /* panda.png */; };
+		DD887C631C59DFE9006E7A63 /* UITabBarController+MPDownLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = DD887C621C59DFE9006E7A63 /* UITabBarController+MPDownLoad.m */; };
+		DD887C651C59E701006E7A63 /* hou.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DD887C641C59E701006E7A63 /* hou.jpg */; };
+		DD887C671C59E709006E7A63 /* meirenyu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DD887C661C59E709006E7A63 /* meirenyu.jpg */; };
 		DDA48A1C1C571AB800ABD9D9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA48A1B1C571AB800ABD9D9 /* ViewController.m */; };
 		DDA48A241C5749B600ABD9D9 /* FLDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA48A211C5749B600ABD9D9 /* FLDownloader.m */; };
 		DDA48A251C5749B600ABD9D9 /* FLDownloadTask.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA48A231C5749B600ABD9D9 /* FLDownloadTask.m */; };
@@ -77,6 +80,10 @@
 		DD887C531C59D37D006E7A63 /* DiscoverEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverEntity.m; sourceTree = "<group>"; };
 		DD887C591C59D5B8006E7A63 /* Discover.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Discover.plist; sourceTree = "<group>"; };
 		DD887C5F1C59D98F006E7A63 /* panda.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = panda.png; sourceTree = "<group>"; };
+		DD887C611C59DFE9006E7A63 /* UITabBarController+MPDownLoad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarController+MPDownLoad.h"; sourceTree = "<group>"; };
+		DD887C621C59DFE9006E7A63 /* UITabBarController+MPDownLoad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarController+MPDownLoad.m"; sourceTree = "<group>"; };
+		DD887C641C59E701006E7A63 /* hou.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hou.jpg; sourceTree = "<group>"; };
+		DD887C661C59E709006E7A63 /* meirenyu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = meirenyu.jpg; sourceTree = "<group>"; };
 		DDA48A1A1C571AB800ABD9D9 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		DDA48A1B1C571AB800ABD9D9 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		DDA48A201C5749B600ABD9D9 /* FLDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLDownloader.h; sourceTree = "<group>"; };
@@ -109,6 +116,8 @@
 				DD6B101D1C59A24A00EA67F0 /* BaseTabBarController.h */,
 				DD6B101E1C59A24A00EA67F0 /* BaseTabBarController.m */,
 				DD6B101F1C59A24A00EA67F0 /* Main.storyboard */,
+				DD887C611C59DFE9006E7A63 /* UITabBarController+MPDownLoad.h */,
+				DD887C621C59DFE9006E7A63 /* UITabBarController+MPDownLoad.m */,
 			);
 			path = BaseTabBarController;
 			sourceTree = "<group>";
@@ -239,6 +248,8 @@
 		DD887C581C59D5B8006E7A63 /* Discover */ = {
 			isa = PBXGroup;
 			children = (
+				DD887C661C59E709006E7A63 /* meirenyu.jpg */,
+				DD887C641C59E701006E7A63 /* hou.jpg */,
 				DD887C5F1C59D98F006E7A63 /* panda.png */,
 				DD887C591C59D5B8006E7A63 /* Discover.plist */,
 			);
@@ -386,9 +397,11 @@
 				DD887C601C59D98F006E7A63 /* panda.png in Resources */,
 				DD6B10211C59A24A00EA67F0 /* Main.storyboard in Resources */,
 				DDBCA1821C55CB7300E9F8C2 /* LaunchScreen.storyboard in Resources */,
+				DD887C671C59E709006E7A63 /* meirenyu.jpg in Resources */,
 				DDBCA17F1C55CB7300E9F8C2 /* Assets.xcassets in Resources */,
 				DD6B10401C59A30700EA67F0 /* MusicDownloadList.storyboard in Resources */,
 				DD6B10611C59A41900EA67F0 /* Discover.storyboard in Resources */,
+				DD887C651C59E701006E7A63 /* hou.jpg in Resources */,
 				DD6B106D1C59AC0900EA67F0 /* Mine.storyboard in Resources */,
 				DD887C5A1C59D5B8006E7A63 /* Discover.plist in Resources */,
 			);
@@ -404,6 +417,7 @@
 				DD6B10741C59AEB000EA67F0 /* BaseViewController.m in Sources */,
 				DD6B10541C59A33400EA67F0 /* MusicPartnerDownloadTask.m in Sources */,
 				DD6B10581C59A37E00EA67F0 /* AppDelegate.m in Sources */,
+				DD887C631C59DFE9006E7A63 /* UITabBarController+MPDownLoad.m in Sources */,
 				DDA48A1C1C571AB800ABD9D9 /* ViewController.m in Sources */,
 				DD6B10291C59A2F100EA67F0 /* MusicListTableCell.m in Sources */,
 				DD6B10411C59A30700EA67F0 /* MusicDownloadListTableCell.m in Sources */,

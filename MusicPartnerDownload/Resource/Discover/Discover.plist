@@ -4,6 +4,26 @@
 <array>
 	<dict>
 		<key>downLoadUrl</key>
+		<string>http://120.25.226.186:32812/resources/videos/minion_01.mp4</string>
+		<key>desc</key>
+		<string>《西游记之孙悟空三打白骨精》是由星皓影业有限公司出品的一部3D动作奇幻电影。该片由郑保瑞主导，郭富城、巩俐、冯绍峰、小沈阳、罗仲谦领衔主演</string>
+		<key>imgName</key>
+		<string>hou.jpg</string>
+		<key>name</key>
+		<string>三打白骨精</string>
+	</dict>
+	<dict>
+		<key>downLoadUrl</key>
+		<string>http://mw5.dwstatic.com/2/4/1529/134981-99-1436844583.mp4</string>
+		<key>desc</key>
+		<string>《美人鱼》由周星驰执导的电影，邓超、林允、张雨绮、罗志祥等联合主演。该片讲述了在海上航行的一艘船，突然不幸遇劫，美人鱼挺身而出，船上的一名英俊青年对她一见钟情，并由此谱写出一段惊心动魄的人鱼恋曲的故事。</string>
+		<key>imgName</key>
+		<string>meirenyu.jpg</string>
+		<key>name</key>
+		<string>美人鱼</string>
+	</dict>
+	<dict>
+		<key>downLoadUrl</key>
 		<string>http://v.meituan.net/movie/videos/4cfaab2ed5fa48819ef0e2dea6fb16ec.mp4</string>
 		<key>desc</key>
 		<string>《功夫熊猫3》是《功夫熊猫》系列的第三部电影，由余仁英执导，杰克·布莱克、凯特·哈德森、布莱恩·科兰斯顿原版配音主演，黄磊、杨幂、成龙、周杰伦、朱珠担任中文版配音</string>

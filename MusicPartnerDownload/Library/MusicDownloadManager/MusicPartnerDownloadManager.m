@@ -17,7 +17,6 @@
 
 @end
 
-
 @implementation MusicPartnerDownloadManager
 
 + (instancetype)sharedInstance
@@ -34,8 +33,23 @@
     self.mpDownloadTasks = [[NSMutableDictionary alloc ] init];
     self.mpDownloadArray   = [self loadDownLoadTask];
     return [super init];
-    
 }
+
+// 获取正在下载的任务数量
+-(NSInteger)getDownLoadingTaskCount{
+    return [self loadUnFinishedTask].count;
+}
+
+// 发送正在下载任务通知
+-(void)postDownLoadingTaskNotification{
+    [[NSNotificationCenter defaultCenter] postNotificationName:MpDownLoadingTask object:nil];
+}
+
+// 发送下载完成任务通知
+-(void)postMpDownLoadCompleteTaskNotification{
+    [[NSNotificationCenter defaultCenter] postNotificationName:MpDownLoadCompleteTask object:nil];
+}
+
 
 -(void)initUnFinishedTask{
     for (NSDictionary *dic in [self loadUnFinishedTask]) {
@@ -54,6 +68,32 @@
 
 
 /**
+ *  获取任务状态
+ *
+ *  @param urlString 下载地址
+ *
+ *  @return 任务状态
+ */
+-(MPTaskState)getTaskState:(NSString *)urlString{
+    
+    // 下载完成
+    if ([[MusicPartnerDownloadManager sharedInstance] isCompletion:urlString]) {
+        return MPTaskCompleted;
+    }
+    // 查询未完成的任务列表
+    NSInteger index = [self isExit:urlString];
+    
+    // 不存在任务
+    if (index == -1) {
+       return MPTaskNoExistTask;
+    }
+    // 任务存在
+    else{
+       return MPTaskExistTask;
+    }
+}
+
+/**
  *  添加下载任务并下载
  *
  *  @param urlString 下载的地址
@@ -67,7 +107,13 @@
         [self.mpDownloadTasks setObject:downLoadTask forKey:mPDownloadEntity.downLoadUrlString];
         MPDownloadState status =  [downLoadTask addTaskWithDownLoadMusic:mPDownloadEntity];
         downLoadTask.delegate = self;
+        
+        // 保存任务状态
         [self saveMPDownLoadTask];
+        
+        // 发送新任务通知
+        [self postDownLoadingTaskNotification];
+        
         return status;
     }
     // 任务存在
@@ -179,6 +225,9 @@
     [downLoadTask deleteFile:url];
     [self.mpDownloadTasks removeObjectForKey:url];
     [self deleteMpDownLoadTask:url];
+    
+    // 下载列表改变
+    [self postDownLoadingTaskNotification];
 }
 
 //　删除本地
@@ -274,6 +323,8 @@
     for (NSString *downLoadString in self.mpDownloadTasks.allKeys) {
         [[MusicPartnerDownloadManager sharedInstance] deleteFile:downLoadString];
     }
+    
+    [self postDownLoadingTaskNotification];
 }
 
 @end

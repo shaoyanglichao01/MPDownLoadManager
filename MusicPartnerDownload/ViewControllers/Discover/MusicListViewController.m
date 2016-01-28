@@ -28,7 +28,7 @@
     NSString *path = [[NSBundle mainBundle] pathForResource:@"Discover" ofType:@".plist"];
     self.discoverList = [NSArray arrayWithContentsOfFile:path];
     
-    [[MusicPartnerDownloadManager sharedInstance] initUnFinishedTask];
+  ;
     [self.mainTableView setTableFooterView:[[UIView alloc ] init]];
     [self.mainTableView  reloadData];
 }
@@ -50,12 +50,26 @@
     NSDictionary *entity = [self.discoverList objectAtIndex:indexPath.row];
     NSString *downLoadUrl = [entity objectForKey:@"downLoadUrl"];
     
+    MPTaskState taskState = [[MusicPartnerDownloadManager sharedInstance ] getTaskState:downLoadUrl];
     
-    
-    MusicPartnerDownloadEntity *downLoadEntity = [[MusicPartnerDownloadEntity alloc] init];
-    downLoadEntity.downLoadUrlString = downLoadUrl;
-    downLoadEntity.extra = entity;
-    [[MusicPartnerDownloadManager sharedInstance] addTaskWithDownLoadMusic:downLoadEntity];
+    switch (taskState) {
+        case MPTaskCompleted:
+            NSLog(@"下载完成");
+            break;
+        case MPTaskExistTask:
+            NSLog(@"任务已经存在");
+            break;
+        case MPTaskNoExistTask:
+        {
+            MusicPartnerDownloadEntity *downLoadEntity = [[MusicPartnerDownloadEntity alloc] init];
+            downLoadEntity.downLoadUrlString = downLoadUrl;
+            downLoadEntity.extra = entity;
+            [[MusicPartnerDownloadManager sharedInstance] addTaskWithDownLoadMusic:downLoadEntity];
+        }
+            break;
+        default:
+            break;
+    }
 }
 
 - (void)didReceiveMemoryWarning {

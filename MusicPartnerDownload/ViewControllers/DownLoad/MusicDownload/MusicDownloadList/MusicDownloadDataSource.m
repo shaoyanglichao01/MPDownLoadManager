@@ -23,13 +23,16 @@
     for (NSDictionary *taskDic in unFinishedTasks) {
         NSString *status         = [taskDic objectForKey:@"mpDownloadState"];
         NSString *downLoadString = [taskDic objectForKey:@"mpDownloadUrlString"];
-        NSString *exra  = [taskDic objectForKey:@"mpDownloadExtra"];
-        NSLog(@"exra%@",exra);
+        NSDictionary *exra       = [taskDic objectForKey:@"mpDownloadExtra"];
+        
         
         TaskEntity *taskEntity = [[TaskEntity alloc ] init];
         taskEntity.downLoadUrl = downLoadString;
         taskEntity.taskDownloadState = [self getTaskDownloadState:status];
         taskEntity.progress = [[MusicPartnerDownloadManager sharedInstance] progress:downLoadString];
+        taskEntity.imgName  = [exra objectForKey:@"imgName"];
+        taskEntity.name     = [exra objectForKey:@"name"];
+        taskEntity.desc     = [exra objectForKey:@"desc"];
         [self.unFinishedTasks addObject:taskEntity];
     }
     

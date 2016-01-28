@@ -34,4 +34,11 @@ typedef void(^TaskEntityDownloadCompleteBlock)(TaskDownloadState mpDownloadState
 @property (nonatomic , copy) TaskEntityDownloadProgressBlock progressBlock;
 @property (nonatomic , copy) TaskEntityDownloadCompleteBlock completeBlock;
 
+
+@property (nonatomic , strong) NSString *imgName;
+
+@property (nonatomic , strong) NSString *name;
+
+@property (nonatomic , strong) NSString *desc;
+
 @end

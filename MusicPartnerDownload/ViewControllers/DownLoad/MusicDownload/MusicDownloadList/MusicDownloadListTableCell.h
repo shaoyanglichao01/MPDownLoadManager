@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "MusicPartnerDownloadManager.h"
+#import "TaskEntity.h"
 
 @interface MusicDownloadListTableCell : UITableViewCell
 
@@ -17,6 +18,14 @@
 @property (weak, nonatomic ) IBOutlet UILabel        *musicDownloadPercent;
 @property (weak, nonatomic ) IBOutlet UIButton       *stopStartBtn;
 
+@property (weak, nonatomic) IBOutlet UIImageView *img;
+
+@property (weak, nonatomic) IBOutlet UILabel *desc;
+
+
 - (IBAction)stopStartAction:(UIButton *)sender;
+
+-(void)showData:(TaskEntity *)taskEntity;
+
 
 @end

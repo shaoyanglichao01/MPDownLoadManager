@@ -8,6 +8,8 @@
 
 #import "BaseTabBarController.h"
 #import "AppColorConfig.h"
+#import "UITabBarController+MPDownLoad.h"
+
 @interface BaseTabBarController ()
 
 @end
@@ -17,7 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setTabBarItems];
-  
+   
+    [self setUpMPDownLoadStateBade];
     
 }
 
