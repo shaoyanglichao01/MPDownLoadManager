@@ -21,16 +21,22 @@
 }
 
 - (IBAction)stopStartAction:(UIButton *)sender {
-    
-    if ([self.stopStartBtn.titleLabel.text isEqualToString:@"暂停"]) {
-        [[MusicPartnerDownloadManager sharedInstance] pause:self.downloadUrl];
-    }else if ([self.stopStartBtn.titleLabel.text isEqualToString:@"开始"]){
-        [[MusicPartnerDownloadManager sharedInstance] start:self.downloadUrl];
+
+    if (self.taskEntity.taskDownloadState == TaskStateRunning) {
+          [[MusicPartnerDownloadManager sharedInstance] pause:self.downloadUrl];
+        [self.stopStartBtn setImage:[UIImage imageNamed:@"pause"] forState:UIControlStateNormal];
+    }else if (self.taskEntity.taskDownloadState == TaskStateSuspended){
+         [[MusicPartnerDownloadManager sharedInstance] start:self.downloadUrl];
+        [self.stopStartBtn setImage:[UIImage imageNamed:@"play"] forState:UIControlStateNormal];
     }
+    
+    
 }
 
 
 -(void)showData:(TaskEntity *)taskEntity{
+    
+    self.taskEntity = taskEntity;
     
     self.desc.text = taskEntity.desc;
     self.img.image = [UIImage imageNamed:taskEntity.imgName];
@@ -40,9 +46,9 @@
     self.musicDownloadPercent.text =  [NSString stringWithFormat:@"%.3f",taskEntity.progress];
     
     if (taskEntity.taskDownloadState == TaskStateSuspended) {
-        [self.stopStartBtn setTitle:@"开始" forState:UIControlStateNormal];
+        [self.stopStartBtn setImage:[UIImage imageNamed:@"play"] forState:UIControlStateNormal];
     }else if (taskEntity.taskDownloadState == TaskStateRunning){
-        [self.stopStartBtn setTitle:@"暂停" forState:UIControlStateNormal];
+        [self.stopStartBtn setImage:[UIImage imageNamed:@"pause"] forState:UIControlStateNormal];
     }
     
     __weak typeof(self) weakSelf = self;
@@ -53,9 +59,12 @@
     
     taskEntity.completeBlock = ^(TaskDownloadState mpDownloadState,NSString *downLoadUrlString) {
         if (mpDownloadState == TaskStateSuspended) {
-            [weakSelf.stopStartBtn setTitle:@"开始" forState:UIControlStateNormal];
+            
+            weakSelf.taskEntity.taskDownloadState = TaskStateSuspended;
+           [weakSelf.stopStartBtn setImage:[UIImage imageNamed:@"play"] forState:UIControlStateNormal];
         }else if (mpDownloadState == TaskStateRunning){
-            [weakSelf.stopStartBtn setTitle:@"暂停" forState:UIControlStateNormal];
+            weakSelf.taskEntity.taskDownloadState = TaskStateRunning;
+            [weakSelf.stopStartBtn setImage:[UIImage imageNamed:@"pause"] forState:UIControlStateNormal];
         }
     };
     

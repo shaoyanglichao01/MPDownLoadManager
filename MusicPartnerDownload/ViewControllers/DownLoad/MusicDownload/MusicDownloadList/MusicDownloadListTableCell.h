@@ -12,6 +12,9 @@
 
 @interface MusicDownloadListTableCell : UITableViewCell
 
+
+@property (nonatomic,strong)TaskEntity *taskEntity;
+
 @property (nonatomic,strong) NSString                *downloadUrl;
 @property (weak, nonatomic ) IBOutlet UILabel        *musicName;
 @property (weak, nonatomic ) IBOutlet UIProgressView *musicDownloadProgress;

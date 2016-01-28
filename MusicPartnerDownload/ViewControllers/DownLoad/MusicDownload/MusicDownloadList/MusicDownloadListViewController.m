@@ -46,17 +46,11 @@
     };
     
     [self.mainTableView setTableFooterView:[[UIView alloc ] init]];
-    
-
-    
 }
 
-
 -(void)viewDidAppear:(BOOL)animated{
-    
     [super viewDidAppear:animated];
-      [self loadNewTask];
-
+    [self loadNewTask];
 }
 
 -(void)loadNewTask{

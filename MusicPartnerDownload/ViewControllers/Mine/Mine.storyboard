@@ -67,21 +67,21 @@
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_movie_play" translatesAutoresizingMaskIntoConstraints="NO" id="lIT-a9-okH">
                                                             <rect key="frame" x="136" y="81" width="48" height="48"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="48" id="Zfz-5a-thN"/>
-                                                                <constraint firstAttribute="width" constant="48" id="eX7-aA-4Ld"/>
+                                                                <constraint firstAttribute="width" constant="48" id="8C1-OM-GGl"/>
+                                                                <constraint firstAttribute="height" constant="48" id="eRM-w9-NJT"/>
                                                             </constraints>
                                                         </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
-                                                        <constraint firstItem="lIT-a9-okH" firstAttribute="top" secondItem="XkE-S5-cwU" secondAttribute="bottom" constant="-94" id="01W-0b-lrh"/>
                                                         <constraint firstAttribute="trailing" secondItem="ezX-pR-A1d" secondAttribute="trailing" constant="10" id="JvY-nA-C8m"/>
                                                         <constraint firstItem="ezX-pR-A1d" firstAttribute="leading" secondItem="8kP-Zw-U5o" secondAttribute="leading" constant="10" id="MR4-ZC-nx5"/>
                                                         <constraint firstAttribute="trailing" secondItem="XkE-S5-cwU" secondAttribute="trailing" constant="10" id="RCH-Jm-bvI"/>
                                                         <constraint firstItem="ezX-pR-A1d" firstAttribute="top" secondItem="8kP-Zw-U5o" secondAttribute="top" constant="10" id="b3L-Xz-kdm"/>
                                                         <constraint firstItem="XkE-S5-cwU" firstAttribute="leading" secondItem="8kP-Zw-U5o" secondAttribute="leading" constant="10" id="eZj-v4-T0l"/>
+                                                        <constraint firstItem="lIT-a9-okH" firstAttribute="centerX" secondItem="XkE-S5-cwU" secondAttribute="centerX" id="h94-pj-O4C"/>
                                                         <constraint firstAttribute="bottom" secondItem="XkE-S5-cwU" secondAttribute="bottom" constant="10" id="kxp-nE-dHR"/>
-                                                        <constraint firstItem="lIT-a9-okH" firstAttribute="leading" secondItem="XkE-S5-cwU" secondAttribute="trailing" constant="-174" id="upV-2S-O81"/>
+                                                        <constraint firstItem="lIT-a9-okH" firstAttribute="centerY" secondItem="XkE-S5-cwU" secondAttribute="centerY" id="rz5-FT-tdb"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>

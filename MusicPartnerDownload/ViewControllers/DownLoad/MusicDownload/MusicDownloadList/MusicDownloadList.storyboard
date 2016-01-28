@@ -95,9 +95,16 @@
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KGL-EJ-4x7">
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KGL-EJ-4x7">
                                                             <rect key="frame" x="254" y="17" width="58" height="45"/>
-                                                            <state key="normal" title="暂停"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="58" id="ggN-Ym-aAk"/>
+                                                                <constraint firstAttribute="height" constant="45" id="t42-vQ-xQS"/>
+                                                            </constraints>
+                                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                            <state key="normal">
+                                                                <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                            </state>
                                                             <connections>
                                                                 <action selector="stopStartAction:" destination="2yt-H9-vl1" eventType="touchUpInside" id="s8E-lq-TzC"/>
                                                             </connections>
@@ -115,6 +122,8 @@
                                                         <constraint firstAttribute="bottom" secondItem="XfH-gv-RVa" secondAttribute="bottom" constant="10" id="SBb-gQ-g3x"/>
                                                         <constraint firstItem="rfH-4L-2Vn" firstAttribute="leading" secondItem="XfH-gv-RVa" secondAttribute="trailing" constant="9" id="UsG-Pa-DPg"/>
                                                         <constraint firstItem="XfH-gv-RVa" firstAttribute="top" secondItem="jcJ-y6-HAY" secondAttribute="bottom" constant="-54" id="YOp-20-XYm"/>
+                                                        <constraint firstAttribute="trailing" secondItem="KGL-EJ-4x7" secondAttribute="trailing" constant="8" id="Yf9-fv-8Fd"/>
+                                                        <constraint firstItem="KGL-EJ-4x7" firstAttribute="top" secondItem="rx0-bj-yQF" secondAttribute="top" constant="17" id="aXN-SI-c7K"/>
                                                         <constraint firstAttribute="trailing" secondItem="xrP-tg-vaL" secondAttribute="trailing" constant="9" id="goL-4C-dyj"/>
                                                         <constraint firstAttribute="trailing" secondItem="rp6-At-4jO" secondAttribute="trailing" constant="71" id="gxv-O0-kIF"/>
                                                         <constraint firstItem="XfH-gv-RVa" firstAttribute="top" secondItem="rx0-bj-yQF" secondAttribute="top" constant="10" id="hh9-LR-ykU"/>
