@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface MusicListViewController : UIViewController
+@interface MusicListViewController : BaseViewController
 
 @end

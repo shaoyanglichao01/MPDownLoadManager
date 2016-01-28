@@ -11,12 +11,22 @@
 @implementation MusicListTableCell
 
 - (void)awakeFromNib {
-
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
+}
 
+- (IBAction)downLoadAction:(UIButton *)sender {
+    [self.delegate addDownLoadTaskAction:self.index];
+}
+
+
+-(void)showData:(NSDictionary *)data{
+    self.name.text = [data objectForKey:@"name"];
+    self.desc.text = [data objectForKey:@"desc"];
+    self.img.image = [UIImage imageNamed:[data objectForKey:@"imgName"]];
 }
 
 @end

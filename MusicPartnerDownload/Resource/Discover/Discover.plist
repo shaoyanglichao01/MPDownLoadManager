@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>downLoadUrl</key>
+		<string>http://v.meituan.net/movie/videos/4cfaab2ed5fa48819ef0e2dea6fb16ec.mp4</string>
+		<key>desc</key>
+		<string>《功夫熊猫3》是《功夫熊猫》系列的第三部电影，由余仁英执导，杰克·布莱克、凯特·哈德森、布莱恩·科兰斯顿原版配音主演，黄磊、杨幂、成龙、周杰伦、朱珠担任中文版配音</string>
+		<key>imgName</key>
+		<string>panda</string>
+		<key>name</key>
+		<string>功夫熊猫</string>
+	</dict>
+</array>
+</plist>

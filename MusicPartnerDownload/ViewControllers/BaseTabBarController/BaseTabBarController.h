@@ -9,12 +9,12 @@
 #import <UIKit/UIKit.h>
 
 typedef NS_ENUM(NSInteger, Enum_TabBar_Item) {
-    /* 购票 */
-    Enum_TabBar_Items_BuyTickets,
-    /* 乘车 */
-    Enum_TabBar_Items_Ride,
+    /* 发现 */
+    Enum_TabBar_Items_Discovre,
+    /* 下载 */
+    Enum_TabBar_Items_DownLoad,
     /* 我的 */
-    Enum_TabBar_Items_MyInfomation
+    Enum_TabBar_Items_Mine
 };
 
 

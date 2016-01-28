@@ -1,5 +1,5 @@
 //
-//  MineViewController.h
+//  BaseViewController.h
 //  MusicPartnerDownload
 //
 //  Created by 度周末网络-王腾 on 16/1/28.
@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BaseViewController.h"
+#import "AppColorConfig.h"
 
-@interface MineViewController : BaseViewController
+@interface BaseViewController : UIViewController
 
 @end

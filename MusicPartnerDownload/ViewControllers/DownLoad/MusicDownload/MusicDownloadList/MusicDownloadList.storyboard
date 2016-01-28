@@ -35,14 +35,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ezz-Ff-XSt">
-                                <rect key="frame" x="5" y="5" width="310" height="555"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MusicDownloadListTableCell" rowHeight="50" id="2yt-H9-vl1" customClass="MusicDownloadListTableCell">
-                                        <rect key="frame" x="0.0" y="92" width="310" height="50"/>
+                                        <rect key="frame" x="0.0" y="92" width="320" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2yt-H9-vl1" id="KuR-5a-w2t">
-                                            <rect key="frame" x="0.0" y="0.0" width="310" height="49"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I Don't Know" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rfH-4L-2Vn">
@@ -85,10 +85,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="ezz-Ff-XSt" secondAttribute="trailing" constant="5" id="0IA-mC-gH6"/>
-                            <constraint firstItem="uKq-bF-eRD" firstAttribute="top" secondItem="ezz-Ff-XSt" secondAttribute="bottom" constant="8" id="Biz-YM-KD2"/>
-                            <constraint firstItem="ezz-Ff-XSt" firstAttribute="top" secondItem="yqU-0A-5H3" secondAttribute="top" constant="5" id="Xvq-AO-lGz"/>
-                            <constraint firstItem="ezz-Ff-XSt" firstAttribute="leading" secondItem="yqU-0A-5H3" secondAttribute="leading" constant="5" id="fSH-2i-mrm"/>
+                            <constraint firstAttribute="trailing" secondItem="ezz-Ff-XSt" secondAttribute="trailing" id="TF9-R5-obM"/>
+                            <constraint firstAttribute="bottom" secondItem="ezz-Ff-XSt" secondAttribute="bottom" id="abW-3q-S76"/>
+                            <constraint firstItem="ezz-Ff-XSt" firstAttribute="top" secondItem="yqU-0A-5H3" secondAttribute="top" id="c9E-Br-rJ7"/>
+                            <constraint firstItem="ezz-Ff-XSt" firstAttribute="leading" secondItem="yqU-0A-5H3" secondAttribute="leading" id="vhb-Y2-YXq"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sdz-7h-gD5">

@@ -20,11 +20,12 @@
  */
 #define GLOBLE_NAVIGATION_COLOR    UI_RGBA_HEX(0x2AA515)
 
+
 /**
- *  全局橘色 2AA515
+ *  TabBar颜色
  */
-#define GLOBLE_ORANGE_COLOR         UI_RGBA_HEX(0xFF6600)
-#define GLOBLE_ORANGE_COLOR_HEX     @"#FF6600"
+#define GLOBLE_TABBAR_COLOR        UI_RGBA_HEX(0xE9632A)
+
 
 /**
  *  全局背景颜色

@@ -9,14 +9,10 @@
         <scene sceneID="Ox7-Uz-pDy">
             <objects>
                 <tabBarController id="qLs-V0-M3S" customClass="BaseTabBarController" sceneMemberID="viewController">
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="icJ-Bf-f6o">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <color key="barTintColor" white="1" alpha="0.90040576550387597" colorSpace="calibratedWhite"/>
-                        <color key="selectedImageTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PtM-QS-rJG" userLabel="First Responder" sceneMemberID="firstResponder"/>

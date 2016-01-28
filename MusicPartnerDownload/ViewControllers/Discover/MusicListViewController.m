@@ -8,18 +8,14 @@
 
 #import "MusicListViewController.h"
 #import "MusicListTableCell.h"
-
 #import "MusicDownloadListViewController.h"
-
 #import "MusicPartnerDownloadManager.h"
 
-@interface MusicListViewController ()
+@interface MusicListViewController () <MusicListDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *mainTableView;
 
-- (IBAction)showDownLoadListAction:(UIButton *)sender;
-
-@property (nonatomic , strong) NSArray *list;
+@property (nonatomic , strong) NSArray *discoverList;
 
 
 @end
@@ -29,49 +25,41 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.list = @[@"http://mw5.dwstatic.com/1/3/1528/133489-99-1436409822.mp4",
-                  @"http://120.25.226.186:32812/resources/videos/minion_01.mp4",
-                  @"http://pic6.nipic.com/20100330/4592428_113348097000_2.jpg"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"Discover" ofType:@".plist"];
+    self.discoverList = [NSArray arrayWithContentsOfFile:path];
     
     [[MusicPartnerDownloadManager sharedInstance] initUnFinishedTask];
-    
     [self.mainTableView setTableFooterView:[[UIView alloc ] init]];
-    
+    [self.mainTableView  reloadData];
 }
 
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return self.list.count;
+    return self.discoverList.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     MusicListTableCell *musicListCell = [tableView dequeueReusableCellWithIdentifier:@"MusicListTableCell"];
+    musicListCell.index    = indexPath;
+    musicListCell.delegate = self;
+    [musicListCell showData:[self.discoverList objectAtIndex:indexPath.row]];
     return musicListCell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+-(void)addDownLoadTaskAction:(NSIndexPath *)indexPath{
     
-    NSString *string = [self.list objectAtIndex:indexPath.row];
+    NSDictionary *entity = [self.discoverList objectAtIndex:indexPath.row];
+    NSString *downLoadUrl = [entity objectForKey:@"downLoadUrl"];
     
     
-    MusicPartnerDownloadEntity *entity = [[MusicPartnerDownloadEntity alloc] init];
-    entity.downLoadUrlString = string;
-    entity.extra = @{@"name":[NSString stringWithFormat:@"kitt%@",@(indexPath.row)]};
     
-    [[MusicPartnerDownloadManager sharedInstance] addTaskWithDownLoadMusic:entity];
-    
+    MusicPartnerDownloadEntity *downLoadEntity = [[MusicPartnerDownloadEntity alloc] init];
+    downLoadEntity.downLoadUrlString = downLoadUrl;
+    downLoadEntity.extra = entity;
+    [[MusicPartnerDownloadManager sharedInstance] addTaskWithDownLoadMusic:downLoadEntity];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-  
 }
 
-- (IBAction)showDownLoadListAction:(UIButton *)sender {
-    
-    MusicDownloadListViewController *musicDownloadListViewController = [MusicDownloadListViewController shareManager];
-   
-    [self.navigationController pushViewController:musicDownloadListViewController animated:YES];
-}
 @end

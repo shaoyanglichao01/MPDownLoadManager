@@ -22,11 +22,12 @@
 		DD6B10541C59A33400EA67F0 /* MusicPartnerDownloadTask.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6B10501C59A33400EA67F0 /* MusicPartnerDownloadTask.m */; };
 		DD6B10581C59A37E00EA67F0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6B10571C59A37E00EA67F0 /* AppDelegate.m */; };
 		DD6B10611C59A41900EA67F0 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD6B10601C59A41900EA67F0 /* Discover.storyboard */; };
-		DD6B10651C59A42800EA67F0 /* MyInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD6B10641C59A42800EA67F0 /* MyInfo.storyboard */; };
-		DD6B10681C59A52F00EA67F0 /* MyInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6B10671C59A52F00EA67F0 /* MyInfoViewController.m */; };
-		DD6B106A1C59A6C600EA67F0 /* 1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = DD6B10691C59A6C600EA67F0 /* 1.jpeg */; };
 		DD6B106D1C59AC0900EA67F0 /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD6B106C1C59AC0900EA67F0 /* Mine.storyboard */; };
 		DD6B10701C59AC1200EA67F0 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6B106F1C59AC1200EA67F0 /* MineViewController.m */; };
+		DD6B10741C59AEB000EA67F0 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6B10731C59AEB000EA67F0 /* BaseViewController.m */; };
+		DD887C541C59D37D006E7A63 /* DiscoverEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = DD887C531C59D37D006E7A63 /* DiscoverEntity.m */; };
+		DD887C5A1C59D5B8006E7A63 /* Discover.plist in Resources */ = {isa = PBXBuildFile; fileRef = DD887C591C59D5B8006E7A63 /* Discover.plist */; };
+		DD887C601C59D98F006E7A63 /* panda.png in Resources */ = {isa = PBXBuildFile; fileRef = DD887C5F1C59D98F006E7A63 /* panda.png */; };
 		DDA48A1C1C571AB800ABD9D9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA48A1B1C571AB800ABD9D9 /* ViewController.m */; };
 		DDA48A241C5749B600ABD9D9 /* FLDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA48A211C5749B600ABD9D9 /* FLDownloader.m */; };
 		DDA48A251C5749B600ABD9D9 /* FLDownloadTask.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA48A231C5749B600ABD9D9 /* FLDownloadTask.m */; };
@@ -67,13 +68,15 @@
 		DD6B105E1C59A3D900EA67F0 /* AppConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConfig.h; sourceTree = "<group>"; };
 		DD6B105F1C59A3D900EA67F0 /* GTCommontHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTCommontHeader.h; sourceTree = "<group>"; };
 		DD6B10601C59A41900EA67F0 /* Discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Discover.storyboard; sourceTree = "<group>"; };
-		DD6B10641C59A42800EA67F0 /* MyInfo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyInfo.storyboard; sourceTree = "<group>"; };
-		DD6B10661C59A52F00EA67F0 /* MyInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyInfoViewController.h; sourceTree = "<group>"; };
-		DD6B10671C59A52F00EA67F0 /* MyInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyInfoViewController.m; sourceTree = "<group>"; };
-		DD6B10691C59A6C600EA67F0 /* 1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpeg; sourceTree = "<group>"; };
 		DD6B106C1C59AC0900EA67F0 /* Mine.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
 		DD6B106E1C59AC1200EA67F0 /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
 		DD6B106F1C59AC1200EA67F0 /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
+		DD6B10721C59AEB000EA67F0 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		DD6B10731C59AEB000EA67F0 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		DD887C521C59D37D006E7A63 /* DiscoverEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverEntity.h; sourceTree = "<group>"; };
+		DD887C531C59D37D006E7A63 /* DiscoverEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverEntity.m; sourceTree = "<group>"; };
+		DD887C591C59D5B8006E7A63 /* Discover.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Discover.plist; sourceTree = "<group>"; };
+		DD887C5F1C59D98F006E7A63 /* panda.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = panda.png; sourceTree = "<group>"; };
 		DDA48A1A1C571AB800ABD9D9 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		DDA48A1B1C571AB800ABD9D9 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		DDA48A201C5749B600ABD9D9 /* FLDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLDownloader.h; sourceTree = "<group>"; };
@@ -110,20 +113,9 @@
 			path = BaseTabBarController;
 			sourceTree = "<group>";
 		};
-		DD6B10221C59A2BF00EA67F0 /* MyInfo */ = {
-			isa = PBXGroup;
-			children = (
-				DD6B10641C59A42800EA67F0 /* MyInfo.storyboard */,
-				DD6B10661C59A52F00EA67F0 /* MyInfoViewController.h */,
-				DD6B10671C59A52F00EA67F0 /* MyInfoViewController.m */,
-			);
-			path = MyInfo;
-			sourceTree = "<group>";
-		};
 		DD6B10231C59A2C700EA67F0 /* Discover */ = {
 			isa = PBXGroup;
 			children = (
-				DD6B10691C59A6C600EA67F0 /* 1.jpeg */,
 				DD6B10251C59A2F100EA67F0 /* MusicListTableCell.h */,
 				DD6B10261C59A2F100EA67F0 /* MusicListTableCell.m */,
 				DD6B10271C59A2F100EA67F0 /* MusicListViewController.h */,
@@ -210,6 +202,49 @@
 			path = Mine;
 			sourceTree = "<group>";
 		};
+		DD6B10711C59AEA600EA67F0 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				DD6B10721C59AEB000EA67F0 /* BaseViewController.h */,
+				DD6B10731C59AEB000EA67F0 /* BaseViewController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		DD887C501C59D35D006E7A63 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				DD887C511C59D36F006E7A63 /* Discover */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		DD887C511C59D36F006E7A63 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				DD887C521C59D37D006E7A63 /* DiscoverEntity.h */,
+				DD887C531C59D37D006E7A63 /* DiscoverEntity.m */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		DD887C551C59D4F9006E7A63 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				DD887C581C59D5B8006E7A63 /* Discover */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		DD887C581C59D5B8006E7A63 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				DD887C5F1C59D98F006E7A63 /* panda.png */,
+				DD887C591C59D5B8006E7A63 /* Discover.plist */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
 		DDA48A1F1C5749B600ABD9D9 /* FLDownload */ = {
 			isa = PBXGroup;
 			children = (
@@ -242,6 +277,9 @@
 		DDBCA1711C55CB7300E9F8C2 /* MusicPartnerDownload */ = {
 			isa = PBXGroup;
 			children = (
+				DD887C551C59D4F9006E7A63 /* Resource */,
+				DD887C501C59D35D006E7A63 /* Entity */,
+				DD6B10711C59AEA600EA67F0 /* Base */,
 				DD6B10551C59A37E00EA67F0 /* App */,
 				DDBCA1A71C55D8FE00E9F8C2 /* Library */,
 				DDBCA18C1C55CE4000E9F8C2 /* ViewControllers */,
@@ -267,7 +305,6 @@
 				DD6B106B1C59AC0100EA67F0 /* Mine */,
 				DD6B10231C59A2C700EA67F0 /* Discover */,
 				DD6B10241C59A2C700EA67F0 /* DownLoad */,
-				DD6B10221C59A2BF00EA67F0 /* MyInfo */,
 				DD6B101C1C59A21E00EA67F0 /* BaseTabBarController */,
 				DDA48A1A1C571AB800ABD9D9 /* ViewController.h */,
 				DDA48A1B1C571AB800ABD9D9 /* ViewController.m */,
@@ -346,14 +383,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD6B106A1C59A6C600EA67F0 /* 1.jpeg in Resources */,
+				DD887C601C59D98F006E7A63 /* panda.png in Resources */,
 				DD6B10211C59A24A00EA67F0 /* Main.storyboard in Resources */,
-				DD6B10651C59A42800EA67F0 /* MyInfo.storyboard in Resources */,
 				DDBCA1821C55CB7300E9F8C2 /* LaunchScreen.storyboard in Resources */,
 				DDBCA17F1C55CB7300E9F8C2 /* Assets.xcassets in Resources */,
 				DD6B10401C59A30700EA67F0 /* MusicDownloadList.storyboard in Resources */,
 				DD6B10611C59A41900EA67F0 /* Discover.storyboard in Resources */,
 				DD6B106D1C59AC0900EA67F0 /* Mine.storyboard in Resources */,
+				DD887C5A1C59D5B8006E7A63 /* Discover.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,13 +401,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD6B10741C59AEB000EA67F0 /* BaseViewController.m in Sources */,
 				DD6B10541C59A33400EA67F0 /* MusicPartnerDownloadTask.m in Sources */,
 				DD6B10581C59A37E00EA67F0 /* AppDelegate.m in Sources */,
 				DDA48A1C1C571AB800ABD9D9 /* ViewController.m in Sources */,
 				DD6B10291C59A2F100EA67F0 /* MusicListTableCell.m in Sources */,
-				DD6B10681C59A52F00EA67F0 /* MyInfoViewController.m in Sources */,
 				DD6B10411C59A30700EA67F0 /* MusicDownloadListTableCell.m in Sources */,
 				DD6B10701C59AC1200EA67F0 /* MineViewController.m in Sources */,
+				DD887C541C59D37D006E7A63 /* DiscoverEntity.m in Sources */,
 				DDA48A241C5749B600ABD9D9 /* FLDownloader.m in Sources */,
 				DD6B10201C59A24A00EA67F0 /* BaseTabBarController.m in Sources */,
 				DD6B103F1C59A30700EA67F0 /* MusicDownloadDataSource.m in Sources */,
