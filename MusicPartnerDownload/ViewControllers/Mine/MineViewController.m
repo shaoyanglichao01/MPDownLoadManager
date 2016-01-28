@@ -40,6 +40,10 @@
    
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return GTFixHeightFloat(140)+55;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.downLoadCompleteDataSource.finishedTasks.count;
 }

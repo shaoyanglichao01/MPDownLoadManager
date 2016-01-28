@@ -32,6 +32,8 @@
     [self.mainTableView  reloadData];
 }
 
+
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.discoverList.count;
 }
@@ -42,6 +44,10 @@
     musicListCell.delegate = self;
     [musicListCell showData:[self.discoverList objectAtIndex:indexPath.row]];
     return musicListCell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return GTFixHeightFloat(140)+90;
 }
 
 -(void)addDownLoadTaskAction:(NSIndexPath *)indexPath{

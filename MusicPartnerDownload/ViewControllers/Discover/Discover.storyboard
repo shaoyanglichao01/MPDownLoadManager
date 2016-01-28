@@ -51,9 +51,6 @@
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="panda.png" translatesAutoresizingMaskIntoConstraints="NO" id="ycM-Zo-qDS">
                                                             <rect key="frame" x="10" y="10" width="300" height="140"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="140" id="RfW-Gp-LhI"/>
-                                                            </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ozzy Osbourne - Blizzard Of Ozzfdsfsdfgdsf" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yMp-5c-MGU">
                                                             <rect key="frame" x="12" y="180" width="196" height="30"/>
@@ -92,14 +89,15 @@
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstItem="rPn-VU-hyq" firstAttribute="leading" secondItem="3FH-zz-CX6" secondAttribute="leading" constant="12" id="1PW-xM-D0E"/>
-                                                        <constraint firstItem="ycM-Zo-qDS" firstAttribute="top" secondItem="3FH-zz-CX6" secondAttribute="top" constant="10" id="2qc-tL-t81"/>
+                                                        <constraint firstItem="ycM-Zo-qDS" firstAttribute="top" secondItem="3FH-zz-CX6" secondAttribute="top" constant="10" id="7Hm-9G-E98"/>
                                                         <constraint firstItem="KjX-6k-SuA" firstAttribute="leading" secondItem="yMp-5c-MGU" secondAttribute="trailing" constant="32" id="7yZ-So-dJY"/>
                                                         <constraint firstAttribute="bottom" secondItem="KjX-6k-SuA" secondAttribute="bottom" constant="10" id="A9I-lB-dZy"/>
                                                         <constraint firstItem="yMp-5c-MGU" firstAttribute="leading" secondItem="3FH-zz-CX6" secondAttribute="leading" constant="12" id="Dxz-7c-j0D"/>
                                                         <constraint firstAttribute="trailing" secondItem="KjX-6k-SuA" secondAttribute="trailing" constant="10" id="FVt-BA-lN9"/>
-                                                        <constraint firstItem="ycM-Zo-qDS" firstAttribute="leading" secondItem="3FH-zz-CX6" secondAttribute="leading" constant="10" id="N0N-vb-SZk"/>
-                                                        <constraint firstAttribute="trailing" secondItem="ycM-Zo-qDS" secondAttribute="trailing" constant="10" id="QFO-VL-y3K"/>
+                                                        <constraint firstItem="KjX-6k-SuA" firstAttribute="top" secondItem="ycM-Zo-qDS" secondAttribute="bottom" constant="10" id="Sig-gi-jKZ"/>
                                                         <constraint firstItem="yMp-5c-MGU" firstAttribute="top" secondItem="rPn-VU-hyq" secondAttribute="bottom" constant="5" id="aJT-0f-kqQ"/>
+                                                        <constraint firstItem="ycM-Zo-qDS" firstAttribute="leading" secondItem="3FH-zz-CX6" secondAttribute="leading" constant="10" id="bD0-ZR-4yO"/>
+                                                        <constraint firstAttribute="trailing" secondItem="ycM-Zo-qDS" secondAttribute="trailing" constant="10" id="eu4-BH-d8L"/>
                                                         <constraint firstAttribute="bottom" secondItem="yMp-5c-MGU" secondAttribute="bottom" constant="10" id="vIJ-Y8-VWI"/>
                                                         <constraint firstAttribute="trailing" secondItem="rPn-VU-hyq" secondAttribute="trailing" constant="87" id="ypW-OP-x3X"/>
                                                     </constraints>
