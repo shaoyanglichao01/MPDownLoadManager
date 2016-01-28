@@ -6,31 +6,31 @@
 		<key>downLoadUrl</key>
 		<string>http://120.25.226.186:32812/resources/videos/minion_01.mp4</string>
 		<key>desc</key>
-		<string>《西游记之孙悟空三打白骨精》是由星皓影业有限公司出品的一部3D动作奇幻电影。该片由郑保瑞主导，郭富城、巩俐、冯绍峰、小沈阳、罗仲谦领衔主演</string>
+		<string>《变形金刚4：绝迹重生》是派拉蒙影业、中国电影频道以及家赋公司联合制作的一部机器人科幻电影，由迈克尔·贝导演，伊伦克鲁格编剧，马克·沃尔伯格、妮可拉·佩尔茨、史坦利·图齐、杰克·莱诺、李冰冰等人主演。该片主要讲述了擎天柱帮助人类赶走霸天虎的英勇故事</string>
 		<key>imgName</key>
-		<string>hou.jpg</string>
+		<string>bianxingjingang.jpg</string>
 		<key>name</key>
-		<string>三打白骨精</string>
+		<string>变形金刚4</string>
 	</dict>
 	<dict>
 		<key>downLoadUrl</key>
 		<string>http://mw5.dwstatic.com/2/4/1529/134981-99-1436844583.mp4</string>
 		<key>desc</key>
-		<string>《美人鱼》由周星驰执导的电影，邓超、林允、张雨绮、罗志祥等联合主演。该片讲述了在海上航行的一艘船，突然不幸遇劫，美人鱼挺身而出，船上的一名英俊青年对她一见钟情，并由此谱写出一段惊心动魄的人鱼恋曲的故事。</string>
+		<string>金刚狼（Wolverine）是美国漫威漫画公司旗下超级英雄，首次登场于《不可思议的绿巨人》（The Incredible Hulk）第180期（1974年10月），本名詹姆斯·罗根·豪利特（James &quot;Logan&quot; Howlett），1832年出生于加拿大的阿尔伯塔省，小.</string>
 		<key>imgName</key>
-		<string>meirenyu.jpg</string>
+		<string>jinganglang.jpg</string>
 		<key>name</key>
-		<string>美人鱼</string>
+		<string>金刚狼</string>
 	</dict>
 	<dict>
 		<key>downLoadUrl</key>
 		<string>http://v.meituan.net/movie/videos/4cfaab2ed5fa48819ef0e2dea6fb16ec.mp4</string>
 		<key>desc</key>
-		<string>《功夫熊猫3》是《功夫熊猫》系列的第三部电影，由余仁英执导，杰克·布莱克、凯特·哈德森、布莱恩·科兰斯顿原版配音主演，黄磊、杨幂、成龙、周杰伦、朱珠担任中文版配音</string>
+		<string>《环太平洋》是吉尔莫·德尔·托罗执导的一部科幻电影，由查理·汉纳姆、 菊地凛子、伊德瑞斯·艾尔巴、朗·普尔曼等人主演，电影于2013年7月12日美国上映。《环太平洋》故事主要讲述人类遭受了太平洋海底巨型怪兽的入侵，</string>
 		<key>imgName</key>
-		<string>panda</string>
+		<string>huantaipingyang.jpg</string>
 		<key>name</key>
-		<string>功夫熊猫</string>
+		<string>环太平洋</string>
 	</dict>
 </array>
 </plist>
