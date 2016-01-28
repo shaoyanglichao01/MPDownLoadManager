@@ -21,6 +21,13 @@
 }
 
 
+-(void)showTip:(NSString *)tip{
+    [self.view makeToast:tip
+                duration:2.0
+                position:@"bottom"
+                   title:nil];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 

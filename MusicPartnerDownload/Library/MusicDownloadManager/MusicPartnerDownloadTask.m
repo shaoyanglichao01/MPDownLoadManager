@@ -125,10 +125,12 @@
     if (self.downLoadTask) {
         self.mpSessionModel.mpDownloadState = MPDownloadStateRunning;
         [self.downLoadTask resume];
-        // 下载完成
-        if (self.mpartnerDownloadCompleteBlock) {
-            self.mpartnerDownloadCompleteBlock(self.mpSessionModel.mpDownloadState,self.mpSessionModel.urlString);
-        }
+
+            // 下载完成
+            if (self.mpartnerDownloadCompleteBlock) {
+                self.mpartnerDownloadCompleteBlock(self.mpSessionModel.mpDownloadState,self.mpSessionModel.urlString);
+            }
+  
     }
 }
 
@@ -138,12 +140,18 @@
 - (void)pause:(NSString *)url
 {
     if (self.downLoadTask) {
+        
         self.mpSessionModel.mpDownloadState = MPDownloadStateSuspended;
-        [self.downLoadTask suspend];
-        // 下载完成
-        if (self.mpartnerDownloadCompleteBlock) {
-            self.mpartnerDownloadCompleteBlock(self.mpSessionModel.mpDownloadState,self.mpSessionModel.urlString);
+        if (self.downLoadTask.state == NSURLSessionTaskStateRunning) {
+            [self.downLoadTask suspend];
         }
+  
+            // 下载完成
+            if (self.mpartnerDownloadCompleteBlock) {
+                self.mpartnerDownloadCompleteBlock(self.mpSessionModel.mpDownloadState,self.mpSessionModel.urlString);
+          
+            }
+     
     }
 }
 
@@ -200,11 +208,14 @@
     NSUInteger expectedSize = self.mpSessionModel.totalLength;
     CGFloat progress = 1.0 * receivedSize / expectedSize;
     self.mpSessionModel.process = progress;
-    if (self.mpartnerDownloadProgressBlock) {
-
-        self.mpartnerDownloadProgressBlock(progress,receivedSize,expectedSize);
  
-    }
+        if (self.mpartnerDownloadProgressBlock) {
+            self.mpartnerDownloadProgressBlock(progress,receivedSize,expectedSize);
+            
+        }
+
+    
+   
    
 }
 
@@ -218,12 +229,13 @@
     if ([self isCompletion:self.mpSessionModel.urlString]) {
         
         self.mpSessionModel.mpDownloadState = MPDownloadStateCompleted;
-        
-        // 下载完成
-        if (self.mpartnerDownloadCompleteBlock) {
-            
-            self.mpartnerDownloadCompleteBlock(MPDownloadStateCompleted,self.mpSessionModel.urlString);
-        }
+  
+            // 下载完成
+            if (self.mpartnerDownloadCompleteBlock) {
+                
+                self.mpartnerDownloadCompleteBlock(MPDownloadStateCompleted,self.mpSessionModel.urlString);
+            }
+   
         
         
         if ([self.delegate respondsToSelector:@selector(downloadComplete:downLoadUrlString:)]) {
@@ -232,12 +244,15 @@
     } else if (error){
         
         self.mpSessionModel.mpDownloadState = MPDownloadStateFailed;
+    
+            // 下载失败
+            if (self.mpartnerDownloadCompleteBlock) {
+                
+                self.mpartnerDownloadCompleteBlock(MPDownloadStateFailed,self.mpSessionModel.urlString);
+            }
+
         
-        // 下载失败
-        if (self.mpartnerDownloadCompleteBlock) {
-            
-            self.mpartnerDownloadCompleteBlock(MPDownloadStateFailed,self.mpSessionModel.urlString);
-        }
+       
     }
     
     // 关闭流

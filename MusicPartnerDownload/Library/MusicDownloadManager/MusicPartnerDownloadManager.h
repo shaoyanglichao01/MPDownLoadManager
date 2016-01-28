@@ -91,6 +91,17 @@ typedef enum {
 -(void)deleAllTask;
 
 /**
+ *  开始所有任务
+ */
+-(void)startAllTask;
+
+/**
+ *  暂停所有任务
+ */
+-(void)pauseAllTask;
+
+
+/**
  *  判断该文件是否下载完成
  */
 - (BOOL)isCompletion:(NSString *)url;

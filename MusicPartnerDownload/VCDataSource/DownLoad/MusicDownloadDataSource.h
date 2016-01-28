@@ -33,4 +33,15 @@ typedef void(^DownloadStatusChangeBlock)(TaskDownloadState mpDownloadState,NSStr
 
 -(void)deleAllTask;
 
+
+/**
+ *  开始所有任务
+ */
+-(void)startAllTask;
+
+/**
+ *  暂停所有任务
+ */
+-(void)pauseAllTask;
+
 @end

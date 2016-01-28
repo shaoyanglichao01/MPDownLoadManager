@@ -34,6 +34,8 @@
 		DD887C721C59F002006E7A63 /* MusicDownloadDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DD887C711C59F002006E7A63 /* MusicDownloadDataSource.m */; };
 		DD887C761C59F02B006E7A63 /* DownLoadCompleteDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DD887C751C59F02B006E7A63 /* DownLoadCompleteDataSource.m */; };
 		DD887C781C59FBC1006E7A63 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD887C771C59FBC1006E7A63 /* MediaPlayer.framework */; };
+		DD887C7C1C5A089A006E7A63 /* Toast+UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD887C7B1C5A089A006E7A63 /* Toast+UIView.m */; };
+		DD887C801C5A0E18006E7A63 /* PopViewLikeQQView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD887C7F1C5A0E18006E7A63 /* PopViewLikeQQView.m */; };
 		DDA48A1C1C571AB800ABD9D9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA48A1B1C571AB800ABD9D9 /* ViewController.m */; };
 		DDA48A241C5749B600ABD9D9 /* FLDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA48A211C5749B600ABD9D9 /* FLDownloader.m */; };
 		DDA48A251C5749B600ABD9D9 /* FLDownloadTask.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA48A231C5749B600ABD9D9 /* FLDownloadTask.m */; };
@@ -92,6 +94,10 @@
 		DD887C741C59F02B006E7A63 /* DownLoadCompleteDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownLoadCompleteDataSource.h; sourceTree = "<group>"; };
 		DD887C751C59F02B006E7A63 /* DownLoadCompleteDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownLoadCompleteDataSource.m; sourceTree = "<group>"; };
 		DD887C771C59FBC1006E7A63 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		DD887C7A1C5A089A006E7A63 /* Toast+UIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Toast+UIView.h"; sourceTree = "<group>"; };
+		DD887C7B1C5A089A006E7A63 /* Toast+UIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Toast+UIView.m"; sourceTree = "<group>"; };
+		DD887C7E1C5A0E18006E7A63 /* PopViewLikeQQView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopViewLikeQQView.h; sourceTree = "<group>"; };
+		DD887C7F1C5A0E18006E7A63 /* PopViewLikeQQView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopViewLikeQQView.m; sourceTree = "<group>"; };
 		DDA48A1A1C571AB800ABD9D9 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		DDA48A1B1C571AB800ABD9D9 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		DDA48A201C5749B600ABD9D9 /* FLDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLDownloader.h; sourceTree = "<group>"; };
@@ -292,6 +298,24 @@
 			path = DownLoadComplete;
 			sourceTree = "<group>";
 		};
+		DD887C791C5A089A006E7A63 /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				DD887C7A1C5A089A006E7A63 /* Toast+UIView.h */,
+				DD887C7B1C5A089A006E7A63 /* Toast+UIView.m */,
+			);
+			path = Toast;
+			sourceTree = "<group>";
+		};
+		DD887C7D1C5A0E0F006E7A63 /* PopViewLike */ = {
+			isa = PBXGroup;
+			children = (
+				DD887C7E1C5A0E18006E7A63 /* PopViewLikeQQView.h */,
+				DD887C7F1C5A0E18006E7A63 /* PopViewLikeQQView.m */,
+			);
+			path = PopViewLike;
+			sourceTree = "<group>";
+		};
 		DDA48A1F1C5749B600ABD9D9 /* FLDownload */ = {
 			isa = PBXGroup;
 			children = (
@@ -364,6 +388,8 @@
 		DDBCA1A71C55D8FE00E9F8C2 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				DD887C7D1C5A0E0F006E7A63 /* PopViewLike */,
+				DD887C791C5A089A006E7A63 /* Toast */,
 				DD6B10481C59A33400EA67F0 /* MusicDownloadManager */,
 				DDA48A1F1C5749B600ABD9D9 /* FLDownload */,
 			);
@@ -452,6 +478,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD887C7C1C5A089A006E7A63 /* Toast+UIView.m in Sources */,
 				DD6B10741C59AEB000EA67F0 /* BaseViewController.m in Sources */,
 				DD6B10541C59A33400EA67F0 /* MusicPartnerDownloadTask.m in Sources */,
 				DD887C721C59F002006E7A63 /* MusicDownloadDataSource.m in Sources */,
@@ -472,6 +499,7 @@
 				DD6B10421C59A30700EA67F0 /* MusicDownloadListViewController.m in Sources */,
 				DDA48A281C574B3600ABD9D9 /* MPDownLoadManager.m in Sources */,
 				DD6B10531C59A33400EA67F0 /* MusicPartnerDownloadManager.m in Sources */,
+				DD887C801C5A0E18006E7A63 /* PopViewLikeQQView.m in Sources */,
 				DD6B10521C59A33400EA67F0 /* MusicPartnerDownloadEntity.m in Sources */,
 				DDBCA1741C55CB7300E9F8C2 /* main.m in Sources */,
 				DD6B102A1C59A2F100EA67F0 /* MusicListViewController.m in Sources */,

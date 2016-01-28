@@ -53,10 +53,12 @@
     
     switch (taskState) {
         case MPTaskCompleted:
-            NSLog(@"下载完成");
+            NSLog(@"已经下载完成");
+            [self showTip:@"已经下载完成,请到我的进行查看"];
             break;
         case MPTaskExistTask:
-            NSLog(@"任务已经存在");
+            NSLog(@"已经在下载列表");
+            [self showTip:@"已经在下载列表"];
             break;
         case MPTaskNoExistTask:
         {
@@ -64,12 +66,15 @@
             downLoadEntity.downLoadUrlString = downLoadUrl;
             downLoadEntity.extra = entity;
             [[MusicPartnerDownloadManager sharedInstance] addTaskWithDownLoadMusic:downLoadEntity];
+            [self showTip:@"添加成功，正在下载"];
+            
         }
             break;
         default:
             break;
     }
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -54,6 +54,22 @@
 }
 
 /**
+ *  开始所有任务
+ */
+-(void)startAllTask{
+    [[MusicPartnerDownloadManager sharedInstance] startAllTask];
+   
+}
+
+/**
+ *  暂停所有任务
+ */
+-(void)pauseAllTask{
+    [[MusicPartnerDownloadManager sharedInstance] pauseAllTask];
+  
+}
+
+/**
  *  开始下载未完成的任务 1.之前的状态是正在下载的则继续下载。否则暂停下载
  */
 -(void)startDownLoadUnFinishedTasks{

@@ -62,6 +62,9 @@
     return [self loadFinishedTask].count;
 }
 
+/**
+ *  初始化上次的数据
+ */
 -(void)initUnFinishedTask{
     for (NSDictionary *dic in [self loadUnFinishedTask]) {
         MusicPartnerDownloadTask *downLoadTask =  [[MusicPartnerDownloadTask alloc ] init];
@@ -142,10 +145,12 @@
     
     __weak typeof(self) weakSelf = self;
     [downLoadTask downLoad:url progressBlock:^(CGFloat progress, CGFloat totalMBRead, CGFloat totalMBExpectedToRead) {
-       
+        
+        
         dispatch_async(dispatch_get_main_queue(), ^{
             progressBlock(progress,totalMBRead,totalMBExpectedToRead);
         });
+        
     
     } completeBlock:^(MPDownloadState mpDownloadState ,NSString *downLoadUrlString) {
         
@@ -166,10 +171,11 @@
         }else{
             [weakSelf saveMPDownLoadTask];
         }
-     
         dispatch_async(dispatch_get_main_queue(), ^{
-           completeBlock(mpDownloadState,downLoadUrlString);
+             completeBlock(mpDownloadState,downLoadUrlString);
         });
+       
+       
         
         
     } mpDownloadState:downLoadStatus];
@@ -343,6 +349,27 @@
         }
     }
     return unFinishedTasks;
+}
+
+/**
+ *  开始所有任务
+ */
+-(void)startAllTask{
+    for (MusicPartnerDownloadTask *task in self.mpDownloadTasks.allValues) {
+        [task start:task.mpSessionModel.urlString];
+        
+    }
+}
+
+/**
+ *  暂停所有任务
+ */
+-(void)pauseAllTask{
+    for (MusicPartnerDownloadTask *task in self.mpDownloadTasks.allValues) {
+        
+        [task pause:task.mpSessionModel.urlString];
+        
+    }
 }
 
 /**

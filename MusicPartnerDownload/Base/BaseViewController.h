@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "AppColorConfig.h"
-
+#import "Toast+UIView.h"
 @interface BaseViewController : UIViewController
+
+-(void)showTip:(NSString *)tip;
 
 @end

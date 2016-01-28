@@ -45,16 +45,17 @@
         [self.stopStartBtn setTitle:@"暂停" forState:UIControlStateNormal];
     }
     
+    __weak typeof(self) weakSelf = self;
     taskEntity.progressBlock = ^(CGFloat progress, CGFloat totalMBRead, CGFloat totalMBExpectedToRead) {
-        self.musicDownloadProgress.progress = progress;
-        self.musicDownloadPercent.text = [NSString stringWithFormat:@"%.3f",progress];
+        weakSelf.musicDownloadProgress.progress = progress;
+        weakSelf.musicDownloadPercent.text = [NSString stringWithFormat:@"%.3f",progress];
     };
     
     taskEntity.completeBlock = ^(TaskDownloadState mpDownloadState,NSString *downLoadUrlString) {
         if (mpDownloadState == TaskStateSuspended) {
-            [self.stopStartBtn setTitle:@"开始" forState:UIControlStateNormal];
+            [weakSelf.stopStartBtn setTitle:@"开始" forState:UIControlStateNormal];
         }else if (mpDownloadState == TaskStateRunning){
-            [self.stopStartBtn setTitle:@"暂停" forState:UIControlStateNormal];
+            [weakSelf.stopStartBtn setTitle:@"暂停" forState:UIControlStateNormal];
         }
     };
     
