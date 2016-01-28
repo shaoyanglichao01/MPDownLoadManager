@@ -22,7 +22,7 @@
             </objects>
             <point key="canvasLocation" x="-737" y="361"/>
         </scene>
-        <!--Music Download List View Controller-->
+        <!--任务-->
         <scene sceneID="U5Z-Wn-cn1">
             <objects>
                 <viewController storyboardIdentifier="MusicDownloadListViewController" id="bw8-oH-Vvx" customClass="MusicDownloadListViewController" sceneMemberID="viewController">
@@ -148,8 +148,8 @@
                             <constraint firstItem="ezz-Ff-XSt" firstAttribute="leading" secondItem="yqU-0A-5H3" secondAttribute="leading" id="vhb-Y2-YXq"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="sdz-7h-gD5">
-                        <barButtonItem key="rightBarButtonItem" title="删除所有任务" style="plain" id="Ada-v5-htd">
+                    <navigationItem key="navigationItem" title="任务" id="sdz-7h-gD5">
+                        <barButtonItem key="rightBarButtonItem" title="..." style="plain" id="Ada-v5-htd">
                             <connections>
                                 <action selector="deleAll:" destination="bw8-oH-Vvx" id="LSW-Wp-nr0"/>
                             </connections>

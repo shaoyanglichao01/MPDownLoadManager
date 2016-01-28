@@ -1,5 +1,5 @@
 //
-//  UITabBarController+MPDownLoad.h
+//  MineTableCell.h
 //  MusicPartnerDownload
 //
 //  Created by 度周末网络-王腾 on 16/1/28.
@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UITabBarController (MPDownLoad) <UITabBarControllerDelegate>
+@interface MineTableCell : UITableViewCell
 
 
--(void)setUpMPDownLoadStateBade;
+@property (weak, nonatomic) IBOutlet UIImageView *img;
+@property (weak, nonatomic) IBOutlet UILabel *name;
+
 
 @end

@@ -42,14 +42,25 @@
 
 // 发送正在下载任务通知
 -(void)postDownLoadingTaskNotification{
-    [[NSNotificationCenter defaultCenter] postNotificationName:MpDownLoadingTask object:nil];
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [[NSNotificationCenter defaultCenter] postNotificationName:MpDownLoadingTask object:nil];
+    });
+    
+    
 }
 
 // 发送下载完成任务通知
 -(void)postMpDownLoadCompleteTaskNotification{
-    [[NSNotificationCenter defaultCenter] postNotificationName:MpDownLoadCompleteTask object:nil];
+    dispatch_async(dispatch_get_main_queue(), ^{
+         [[NSNotificationCenter defaultCenter] postNotificationName:MpDownLoadCompleteTask object:nil];
+    });
 }
 
+// 获取下载完成的任务数量
+-(NSInteger)getFinishedTaskCount{
+    return [self loadFinishedTask].count;
+}
 
 -(void)initUnFinishedTask{
     for (NSDictionary *dic in [self loadUnFinishedTask]) {
@@ -139,15 +150,23 @@
     } completeBlock:^(MPDownloadState mpDownloadState ,NSString *downLoadUrlString) {
         
         if (mpDownloadState == MPDownloadStateCompleted) {
+            
+            // 修改本地状态
+            [weakSelf saveMPDownLoadTask];
+            
             //　删除本地任务
-            [weakSelf deleteMpDownLoadTask:url];
             [weakSelf.mpDownloadTasks removeObjectForKey:url];
+       
+            // 下载列表改变
+            [weakSelf postDownLoadingTaskNotification];
+            
+            // 任务完成
+            [weakSelf postMpDownLoadCompleteTaskNotification];
             
         }else{
             [weakSelf saveMPDownLoadTask];
         }
      
-        
         dispatch_async(dispatch_get_main_queue(), ^{
            completeBlock(mpDownloadState,downLoadUrlString);
         });
@@ -156,10 +175,20 @@
     } mpDownloadState:downLoadStatus];
 }
 
+
 -(void)downloadComplete:(MPDownloadState)mpDownloadState downLoadUrlString:(NSString *)downLoadUrlString{
+    
+    // 修改本地状态
+    [self saveMPDownLoadTask];
+    
     //　删除本地任务
-    [self deleteMpDownLoadTask:downLoadUrlString];
     [self.mpDownloadTasks removeObjectForKey:downLoadUrlString];
+  
+    // 下载列表改变
+    [self postDownLoadingTaskNotification];
+    
+    // 任务完成
+    [self postMpDownLoadCompleteTaskNotification];
 }
 
 -(MPDownloadState)getMPDownloadState:(NSString *)url{
@@ -249,9 +278,9 @@
         MusicPartnerDownloadTask *downLoadTask = [self.mpDownloadTasks objectForKey:string];
         NSMutableDictionary *mpSession = [[NSMutableDictionary alloc ] init];
         [mpSession setObject:@(downLoadTask.mpSessionModel.mpDownloadState) forKey:@"mpDownloadState"];
-        [mpSession setObject:string         forKey:@"mpDownloadUrlString"];
+        [mpSession setObject:string                            forKey:@"mpDownloadUrlString"];
         [mpSession setObject:downLoadTask.mpSessionModel.extra forKey:@"mpDownloadExtra"];
-        
+        [mpSession setObject:MPFileFullpath(string)            forKey:@"mpDownLoadPath"];
         
         NSInteger index = [self isExit:string];
         if (index == -1) {

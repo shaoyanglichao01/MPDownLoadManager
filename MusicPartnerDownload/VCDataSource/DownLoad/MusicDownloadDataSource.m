@@ -24,7 +24,7 @@
         NSString *status         = [taskDic objectForKey:@"mpDownloadState"];
         NSString *downLoadString = [taskDic objectForKey:@"mpDownloadUrlString"];
         NSDictionary *exra       = [taskDic objectForKey:@"mpDownloadExtra"];
-        
+        NSString *downLoadPath   = [taskDic objectForKey:@"mpDownLoadPath"];
         
         TaskEntity *taskEntity = [[TaskEntity alloc ] init];
         taskEntity.downLoadUrl = downLoadString;
@@ -33,6 +33,7 @@
         taskEntity.imgName  = [exra objectForKey:@"imgName"];
         taskEntity.name     = [exra objectForKey:@"name"];
         taskEntity.desc     = [exra objectForKey:@"desc"];
+        taskEntity.mpDownLoadPath = downLoadPath;
         [self.unFinishedTasks addObject:taskEntity];
     }
     
@@ -66,6 +67,9 @@
             if (mpDownloadState == MPDownloadStateCompleted) {
                 [self deleteFinishedTasks:downLoadUrlString];
             }
+            
+            taskEntity.progress = [[MusicPartnerDownloadManager sharedInstance] progress:downLoadUrlString];
+            
             taskEntity.completeBlock(taskEntity.taskDownloadState,downLoadUrlString);
             
             if (self.downloadStatusChangeBlock) {

@@ -60,6 +60,9 @@ typedef enum {
 // 获取正在下载的任务数量
 -(NSInteger)getDownLoadingTaskCount;
 
+// 获取下载完成的任务数量
+-(NSInteger)getFinishedTaskCount;
+
 /**
  *  查询该资源的下载进度值
  */
@@ -105,7 +108,6 @@ typedef enum {
  *  @return
  */
 -(NSMutableArray *)loadDownLoadTask;
-
 
 /**
  *  读取未完成的下载任务

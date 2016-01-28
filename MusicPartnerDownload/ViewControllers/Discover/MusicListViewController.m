@@ -28,7 +28,6 @@
     NSString *path = [[NSBundle mainBundle] pathForResource:@"Discover" ofType:@".plist"];
     self.discoverList = [NSArray arrayWithContentsOfFile:path];
     
-  ;
     [self.mainTableView setTableFooterView:[[UIView alloc ] init]];
     [self.mainTableView  reloadData];
 }

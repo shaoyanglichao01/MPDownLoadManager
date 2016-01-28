@@ -41,4 +41,6 @@ typedef void(^TaskEntityDownloadCompleteBlock)(TaskDownloadState mpDownloadState
 
 @property (nonatomic , strong) NSString *desc;
 
+@property (nonatomic , strong) NSString *mpDownLoadPath;
+
 @end

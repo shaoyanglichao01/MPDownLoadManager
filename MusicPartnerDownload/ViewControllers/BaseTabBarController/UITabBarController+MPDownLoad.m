@@ -16,7 +16,47 @@
     [self mpDownLoadingTask];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(mpDownLoadingTask) name:MpDownLoadingTask object:nil];
+    
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(mpDownLoadCompleteTask) name:MpDownLoadCompleteTask object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appWillTerminate) name:UIApplicationWillTerminateNotification object:nil];
+    
+    self.delegate = self;
 }
+
+-(void)appWillTerminate{
+    
+}
+
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
+    NSInteger selectedIndex = [tabBarController.viewControllers indexOfObject:viewController];
+    if (selectedIndex == 2) {
+        [self reSetMpDownLoadCompleteTaskCount];
+    }
+}
+
+-(void)reSetMpDownLoadCompleteTaskCount{
+    
+    NSNumber *count =  [[NSUserDefaults standardUserDefaults] objectForKey:@"mpDownLoadCompleteTaskCountFlag"];
+    [[NSUserDefaults standardUserDefaults] setObject:count forKey:@"mpDownLoadCompleteTaskCount"];
+    [self.viewControllers objectAtIndex:2].tabBarItem.badgeValue =  nil;
+}
+
+
+-(void)mpDownLoadCompleteTask{
+    NSInteger taskCount = [[MusicPartnerDownloadManager sharedInstance] getFinishedTaskCount];
+    [[NSUserDefaults standardUserDefaults] setObject:@(taskCount) forKey:@"mpDownLoadCompleteTaskCountFlag"];
+    NSNumber *count =  [[NSUserDefaults standardUserDefaults] objectForKey:@"mpDownLoadCompleteTaskCount"];
+    
+    NSInteger currentTaskCount = taskCount - [count integerValue];
+    if (currentTaskCount > 0) {
+        [self.viewControllers objectAtIndex:2].tabBarItem.badgeValue = [NSString stringWithFormat:@"%i",(int)currentTaskCount];
+    }else{
+        [self.viewControllers objectAtIndex:2].tabBarItem.badgeValue =  nil;
+    }
+}
+
 
 -(void)mpDownLoadingTask{
      NSInteger taskCount = [[MusicPartnerDownloadManager sharedInstance] getDownLoadingTaskCount];
@@ -26,5 +66,6 @@
         [self.viewControllers objectAtIndex:1].tabBarItem.badgeValue =  nil;
     }
 }
+
 
 @end

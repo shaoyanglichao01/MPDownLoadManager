@@ -10,7 +10,7 @@
 #import "AppColorConfig.h"
 #import "UITabBarController+MPDownLoad.h"
 
-@interface BaseTabBarController ()
+@interface BaseTabBarController () <UITabBarControllerDelegate>
 
 @end
 
@@ -22,7 +22,12 @@
    
     [self setUpMPDownLoadStateBade];
     
+
+    
 }
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -64,7 +69,7 @@
     [self.tabBar setSelectedImageTintColor:GLOBLE_TABBAR_COLOR];
     
     // 改变tabBar 上title的颜色 和 字体大小
-    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:GLOBLE_GRAY_COLOR_2, NSForegroundColorAttributeName, [UIFont systemFontOfSize:11], NSFontAttributeName, nil] forState:UIControlStateNormal];
+    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:GLOBLE_GRAY_COLOR_3, NSForegroundColorAttributeName, [UIFont systemFontOfSize:11], NSFontAttributeName, nil] forState:UIControlStateNormal];
     
     [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont systemFontOfSize:11],NSFontAttributeName,GLOBLE_NAVIGATION_COLOR,NSForegroundColorAttributeName,nil] forState:UIControlStateSelected];
     

@@ -103,8 +103,8 @@
         self.downLoadTask = [self.session dataTaskWithRequest:request];
         self.mpSessionModel.urlString = url;
         self.mpSessionModel.stream    = stream;
-        self.mpSessionModel.downLoadPath = MPFileFullpath(url);
-    
+         self.mpSessionModel.downLoadPath = MPFileFullpath(url);
+        
         // 开始下载
         if (mpDownloadState == MPDownloadStateRunning) {
          

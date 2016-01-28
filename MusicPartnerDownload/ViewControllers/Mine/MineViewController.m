@@ -7,8 +7,16 @@
 //
 
 #import "MineViewController.h"
+#import "MineTableCell.h"
+#import "MusicPartnerDownloadManager.h"
+#import "TaskEntity.h"
+#import "DownLoadCompleteDataSource.h"
+#import <MediaPlayer/MediaPlayer.h>
 
 @interface MineViewController ()
+@property (weak, nonatomic) IBOutlet UITableView *mainTableView;
+
+@property (nonatomic , strong) DownLoadCompleteDataSource *downLoadCompleteDataSource;
 
 @end
 
@@ -16,22 +24,41 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.downLoadCompleteDataSource = [[DownLoadCompleteDataSource alloc ] init];
+    [self mpDownLoadCompleteTask];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(mpDownLoadCompleteTask) name:MpDownLoadCompleteTask object:nil];
+}
+
+-(void)mpDownLoadCompleteTask{
+    [self.downLoadCompleteDataSource loadFinishedTasks];
+    [self.mainTableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+   
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.downLoadCompleteDataSource.finishedTasks.count;
 }
-*/
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    MineTableCell *musicListCell = [tableView dequeueReusableCellWithIdentifier:@"MineTableCell"];
+    TaskEntity *taskEntity = [self.downLoadCompleteDataSource.finishedTasks objectAtIndex:indexPath.row];
+    musicListCell.name.text = taskEntity.name;
+    musicListCell.img.image = [UIImage imageNamed:taskEntity.imgName];
+    
+    return musicListCell;
+}
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    TaskEntity *taskEntity = [self.downLoadCompleteDataSource.finishedTasks objectAtIndex:indexPath.row];
+    MPMoviePlayerViewController *moviePlayer = [[MPMoviePlayerViewController alloc] initWithContentURL:[NSURL fileURLWithPath:taskEntity.mpDownLoadPath]];
+    [self presentViewController:moviePlayer animated:YES completion:nil];
+}
 
 @end

@@ -33,7 +33,6 @@ typedef enum {
 /** 存放地址 */
 @property (nonatomic, strong ) NSString        *downLoadPath;
 
-
 /** 获得服务器这次请求 返回数据的总长度 */
 @property (nonatomic, assign ) u_int64_t       totalLength;
 
