@@ -7,29 +7,68 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD6B10201C59A24A00EA67F0 /* BaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6B101E1C59A24A00EA67F0 /* BaseTabBarController.m */; };
+		DD6B10211C59A24A00EA67F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD6B101F1C59A24A00EA67F0 /* Main.storyboard */; };
+		DD6B10291C59A2F100EA67F0 /* MusicListTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6B10261C59A2F100EA67F0 /* MusicListTableCell.m */; };
+		DD6B102A1C59A2F100EA67F0 /* MusicListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6B10281C59A2F100EA67F0 /* MusicListViewController.m */; };
+		DD6B103F1C59A30700EA67F0 /* MusicDownloadDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6B102E1C59A30700EA67F0 /* MusicDownloadDataSource.m */; };
+		DD6B10401C59A30700EA67F0 /* MusicDownloadList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD6B102F1C59A30700EA67F0 /* MusicDownloadList.storyboard */; };
+		DD6B10411C59A30700EA67F0 /* MusicDownloadListTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6B10311C59A30700EA67F0 /* MusicDownloadListTableCell.m */; };
+		DD6B10421C59A30700EA67F0 /* MusicDownloadListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6B10331C59A30700EA67F0 /* MusicDownloadListViewController.m */; };
+		DD6B10431C59A30700EA67F0 /* TaskEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6B10351C59A30700EA67F0 /* TaskEntity.m */; };
+		DD6B10511C59A33400EA67F0 /* MPSessionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6B104A1C59A33400EA67F0 /* MPSessionModel.m */; };
+		DD6B10521C59A33400EA67F0 /* MusicPartnerDownloadEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6B104C1C59A33400EA67F0 /* MusicPartnerDownloadEntity.m */; };
+		DD6B10531C59A33400EA67F0 /* MusicPartnerDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6B104E1C59A33400EA67F0 /* MusicPartnerDownloadManager.m */; };
+		DD6B10541C59A33400EA67F0 /* MusicPartnerDownloadTask.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6B10501C59A33400EA67F0 /* MusicPartnerDownloadTask.m */; };
+		DD6B10581C59A37E00EA67F0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6B10571C59A37E00EA67F0 /* AppDelegate.m */; };
+		DD6B10611C59A41900EA67F0 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD6B10601C59A41900EA67F0 /* Discover.storyboard */; };
+		DD6B10651C59A42800EA67F0 /* MyInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD6B10641C59A42800EA67F0 /* MyInfo.storyboard */; };
+		DD6B10681C59A52F00EA67F0 /* MyInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6B10671C59A52F00EA67F0 /* MyInfoViewController.m */; };
+		DD6B106A1C59A6C600EA67F0 /* 1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = DD6B10691C59A6C600EA67F0 /* 1.jpeg */; };
 		DDA48A1C1C571AB800ABD9D9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA48A1B1C571AB800ABD9D9 /* ViewController.m */; };
 		DDA48A241C5749B600ABD9D9 /* FLDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA48A211C5749B600ABD9D9 /* FLDownloader.m */; };
 		DDA48A251C5749B600ABD9D9 /* FLDownloadTask.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA48A231C5749B600ABD9D9 /* FLDownloadTask.m */; };
 		DDA48A281C574B3600ABD9D9 /* MPDownLoadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA48A271C574B3600ABD9D9 /* MPDownLoadManager.m */; };
 		DDBCA1741C55CB7300E9F8C2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DDBCA1731C55CB7300E9F8C2 /* main.m */; };
-		DDBCA1771C55CB7300E9F8C2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DDBCA1761C55CB7300E9F8C2 /* AppDelegate.m */; };
-		DDBCA17D1C55CB7300E9F8C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDBCA17B1C55CB7300E9F8C2 /* Main.storyboard */; };
 		DDBCA17F1C55CB7300E9F8C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDBCA17E1C55CB7300E9F8C2 /* Assets.xcassets */; };
 		DDBCA1821C55CB7300E9F8C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDBCA1801C55CB7300E9F8C2 /* LaunchScreen.storyboard */; };
-		DDBCA18B1C55CE1100E9F8C2 /* MusicListTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DDBCA18A1C55CE1100E9F8C2 /* MusicListTableCell.m */; };
-		DDBCA18F1C55CE5100E9F8C2 /* MusicListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDBCA18E1C55CE5100E9F8C2 /* MusicListViewController.m */; };
-		DDBCA1A01C55D17200E9F8C2 /* MusicDownloadList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDBCA19B1C55D17200E9F8C2 /* MusicDownloadList.storyboard */; };
-		DDBCA1A11C55D17200E9F8C2 /* MusicDownloadListTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DDBCA19D1C55D17200E9F8C2 /* MusicDownloadListTableCell.m */; };
-		DDBCA1A21C55D17200E9F8C2 /* MusicDownloadListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDBCA19F1C55D17200E9F8C2 /* MusicDownloadListViewController.m */; };
-		DDCC61081C589F2900689D34 /* MusicDownloadDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DDCC61071C589F2900689D34 /* MusicDownloadDataSource.m */; };
-		DDCC610B1C589FC500689D34 /* TaskEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = DDCC610A1C589FC500689D34 /* TaskEntity.m */; };
-		DDCC61191C58B22F00689D34 /* MPSessionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DDCC61121C58B22F00689D34 /* MPSessionModel.m */; };
-		DDCC611A1C58B22F00689D34 /* MusicPartnerDownloadEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = DDCC61141C58B22F00689D34 /* MusicPartnerDownloadEntity.m */; };
-		DDCC611B1C58B22F00689D34 /* MusicPartnerDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DDCC61161C58B22F00689D34 /* MusicPartnerDownloadManager.m */; };
-		DDCC611C1C58B22F00689D34 /* MusicPartnerDownloadTask.m in Sources */ = {isa = PBXBuildFile; fileRef = DDCC61181C58B22F00689D34 /* MusicPartnerDownloadTask.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DD6B101D1C59A24A00EA67F0 /* BaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabBarController.h; sourceTree = "<group>"; };
+		DD6B101E1C59A24A00EA67F0 /* BaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarController.m; sourceTree = "<group>"; };
+		DD6B101F1C59A24A00EA67F0 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		DD6B10251C59A2F100EA67F0 /* MusicListTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicListTableCell.h; sourceTree = "<group>"; };
+		DD6B10261C59A2F100EA67F0 /* MusicListTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicListTableCell.m; sourceTree = "<group>"; };
+		DD6B10271C59A2F100EA67F0 /* MusicListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicListViewController.h; sourceTree = "<group>"; };
+		DD6B10281C59A2F100EA67F0 /* MusicListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicListViewController.m; sourceTree = "<group>"; };
+		DD6B102D1C59A30700EA67F0 /* MusicDownloadDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicDownloadDataSource.h; sourceTree = "<group>"; };
+		DD6B102E1C59A30700EA67F0 /* MusicDownloadDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicDownloadDataSource.m; sourceTree = "<group>"; };
+		DD6B102F1C59A30700EA67F0 /* MusicDownloadList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MusicDownloadList.storyboard; sourceTree = "<group>"; };
+		DD6B10301C59A30700EA67F0 /* MusicDownloadListTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicDownloadListTableCell.h; sourceTree = "<group>"; };
+		DD6B10311C59A30700EA67F0 /* MusicDownloadListTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicDownloadListTableCell.m; sourceTree = "<group>"; };
+		DD6B10321C59A30700EA67F0 /* MusicDownloadListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicDownloadListViewController.h; sourceTree = "<group>"; };
+		DD6B10331C59A30700EA67F0 /* MusicDownloadListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicDownloadListViewController.m; sourceTree = "<group>"; };
+		DD6B10341C59A30700EA67F0 /* TaskEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskEntity.h; sourceTree = "<group>"; };
+		DD6B10351C59A30700EA67F0 /* TaskEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskEntity.m; sourceTree = "<group>"; };
+		DD6B10491C59A33400EA67F0 /* MPSessionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPSessionModel.h; sourceTree = "<group>"; };
+		DD6B104A1C59A33400EA67F0 /* MPSessionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPSessionModel.m; sourceTree = "<group>"; };
+		DD6B104B1C59A33400EA67F0 /* MusicPartnerDownloadEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicPartnerDownloadEntity.h; sourceTree = "<group>"; };
+		DD6B104C1C59A33400EA67F0 /* MusicPartnerDownloadEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicPartnerDownloadEntity.m; sourceTree = "<group>"; };
+		DD6B104D1C59A33400EA67F0 /* MusicPartnerDownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicPartnerDownloadManager.h; sourceTree = "<group>"; };
+		DD6B104E1C59A33400EA67F0 /* MusicPartnerDownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicPartnerDownloadManager.m; sourceTree = "<group>"; };
+		DD6B104F1C59A33400EA67F0 /* MusicPartnerDownloadTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicPartnerDownloadTask.h; sourceTree = "<group>"; };
+		DD6B10501C59A33400EA67F0 /* MusicPartnerDownloadTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicPartnerDownloadTask.m; sourceTree = "<group>"; };
+		DD6B10561C59A37E00EA67F0 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DD6B10571C59A37E00EA67F0 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DD6B105D1C59A3D900EA67F0 /* AppColorConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppColorConfig.h; sourceTree = "<group>"; };
+		DD6B105E1C59A3D900EA67F0 /* AppConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConfig.h; sourceTree = "<group>"; };
+		DD6B105F1C59A3D900EA67F0 /* GTCommontHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTCommontHeader.h; sourceTree = "<group>"; };
+		DD6B10601C59A41900EA67F0 /* Discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Discover.storyboard; sourceTree = "<group>"; };
+		DD6B10641C59A42800EA67F0 /* MyInfo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyInfo.storyboard; sourceTree = "<group>"; };
+		DD6B10661C59A52F00EA67F0 /* MyInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyInfoViewController.h; sourceTree = "<group>"; };
+		DD6B10671C59A52F00EA67F0 /* MyInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyInfoViewController.m; sourceTree = "<group>"; };
+		DD6B10691C59A6C600EA67F0 /* 1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpeg; sourceTree = "<group>"; };
 		DDA48A1A1C571AB800ABD9D9 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		DDA48A1B1C571AB800ABD9D9 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		DDA48A201C5749B600ABD9D9 /* FLDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLDownloader.h; sourceTree = "<group>"; };
@@ -40,33 +79,9 @@
 		DDA48A271C574B3600ABD9D9 /* MPDownLoadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPDownLoadManager.m; sourceTree = "<group>"; };
 		DDBCA16F1C55CB7300E9F8C2 /* MusicPartnerDownload.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicPartnerDownload.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDBCA1731C55CB7300E9F8C2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		DDBCA1751C55CB7300E9F8C2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		DDBCA1761C55CB7300E9F8C2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		DDBCA17C1C55CB7300E9F8C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DDBCA17E1C55CB7300E9F8C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDBCA1811C55CB7300E9F8C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DDBCA1831C55CB7300E9F8C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DDBCA1891C55CE1100E9F8C2 /* MusicListTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MusicListTableCell.h; path = ../MusicListTableCell.h; sourceTree = "<group>"; };
-		DDBCA18A1C55CE1100E9F8C2 /* MusicListTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MusicListTableCell.m; path = ../MusicListTableCell.m; sourceTree = "<group>"; };
-		DDBCA18D1C55CE5100E9F8C2 /* MusicListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicListViewController.h; sourceTree = "<group>"; };
-		DDBCA18E1C55CE5100E9F8C2 /* MusicListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicListViewController.m; sourceTree = "<group>"; };
-		DDBCA19B1C55D17200E9F8C2 /* MusicDownloadList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MusicDownloadList.storyboard; sourceTree = "<group>"; };
-		DDBCA19C1C55D17200E9F8C2 /* MusicDownloadListTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicDownloadListTableCell.h; sourceTree = "<group>"; };
-		DDBCA19D1C55D17200E9F8C2 /* MusicDownloadListTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicDownloadListTableCell.m; sourceTree = "<group>"; };
-		DDBCA19E1C55D17200E9F8C2 /* MusicDownloadListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicDownloadListViewController.h; sourceTree = "<group>"; };
-		DDBCA19F1C55D17200E9F8C2 /* MusicDownloadListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicDownloadListViewController.m; sourceTree = "<group>"; };
-		DDCC61061C589F2900689D34 /* MusicDownloadDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicDownloadDataSource.h; sourceTree = "<group>"; };
-		DDCC61071C589F2900689D34 /* MusicDownloadDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicDownloadDataSource.m; sourceTree = "<group>"; };
-		DDCC61091C589FC500689D34 /* TaskEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskEntity.h; sourceTree = "<group>"; };
-		DDCC610A1C589FC500689D34 /* TaskEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskEntity.m; sourceTree = "<group>"; };
-		DDCC61111C58B22F00689D34 /* MPSessionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPSessionModel.h; sourceTree = "<group>"; };
-		DDCC61121C58B22F00689D34 /* MPSessionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPSessionModel.m; sourceTree = "<group>"; };
-		DDCC61131C58B22F00689D34 /* MusicPartnerDownloadEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicPartnerDownloadEntity.h; sourceTree = "<group>"; };
-		DDCC61141C58B22F00689D34 /* MusicPartnerDownloadEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicPartnerDownloadEntity.m; sourceTree = "<group>"; };
-		DDCC61151C58B22F00689D34 /* MusicPartnerDownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicPartnerDownloadManager.h; sourceTree = "<group>"; };
-		DDCC61161C58B22F00689D34 /* MusicPartnerDownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicPartnerDownloadManager.m; sourceTree = "<group>"; };
-		DDCC61171C58B22F00689D34 /* MusicPartnerDownloadTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicPartnerDownloadTask.h; sourceTree = "<group>"; };
-		DDCC61181C58B22F00689D34 /* MusicPartnerDownloadTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicPartnerDownloadTask.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +95,106 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD6B101C1C59A21E00EA67F0 /* BaseTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				DD6B101D1C59A24A00EA67F0 /* BaseTabBarController.h */,
+				DD6B101E1C59A24A00EA67F0 /* BaseTabBarController.m */,
+				DD6B101F1C59A24A00EA67F0 /* Main.storyboard */,
+			);
+			path = BaseTabBarController;
+			sourceTree = "<group>";
+		};
+		DD6B10221C59A2BF00EA67F0 /* MyInfo */ = {
+			isa = PBXGroup;
+			children = (
+				DD6B10641C59A42800EA67F0 /* MyInfo.storyboard */,
+				DD6B10661C59A52F00EA67F0 /* MyInfoViewController.h */,
+				DD6B10671C59A52F00EA67F0 /* MyInfoViewController.m */,
+			);
+			path = MyInfo;
+			sourceTree = "<group>";
+		};
+		DD6B10231C59A2C700EA67F0 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				DD6B10691C59A6C600EA67F0 /* 1.jpeg */,
+				DD6B10251C59A2F100EA67F0 /* MusicListTableCell.h */,
+				DD6B10261C59A2F100EA67F0 /* MusicListTableCell.m */,
+				DD6B10271C59A2F100EA67F0 /* MusicListViewController.h */,
+				DD6B10281C59A2F100EA67F0 /* MusicListViewController.m */,
+				DD6B10601C59A41900EA67F0 /* Discover.storyboard */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		DD6B10241C59A2C700EA67F0 /* DownLoad */ = {
+			isa = PBXGroup;
+			children = (
+				DD6B102B1C59A30700EA67F0 /* MusicDownload */,
+			);
+			path = DownLoad;
+			sourceTree = "<group>";
+		};
+		DD6B102B1C59A30700EA67F0 /* MusicDownload */ = {
+			isa = PBXGroup;
+			children = (
+				DD6B102C1C59A30700EA67F0 /* MusicDownloadList */,
+			);
+			path = MusicDownload;
+			sourceTree = "<group>";
+		};
+		DD6B102C1C59A30700EA67F0 /* MusicDownloadList */ = {
+			isa = PBXGroup;
+			children = (
+				DD6B102D1C59A30700EA67F0 /* MusicDownloadDataSource.h */,
+				DD6B102E1C59A30700EA67F0 /* MusicDownloadDataSource.m */,
+				DD6B102F1C59A30700EA67F0 /* MusicDownloadList.storyboard */,
+				DD6B10301C59A30700EA67F0 /* MusicDownloadListTableCell.h */,
+				DD6B10311C59A30700EA67F0 /* MusicDownloadListTableCell.m */,
+				DD6B10321C59A30700EA67F0 /* MusicDownloadListViewController.h */,
+				DD6B10331C59A30700EA67F0 /* MusicDownloadListViewController.m */,
+				DD6B10341C59A30700EA67F0 /* TaskEntity.h */,
+				DD6B10351C59A30700EA67F0 /* TaskEntity.m */,
+			);
+			path = MusicDownloadList;
+			sourceTree = "<group>";
+		};
+		DD6B10481C59A33400EA67F0 /* MusicDownloadManager */ = {
+			isa = PBXGroup;
+			children = (
+				DD6B10491C59A33400EA67F0 /* MPSessionModel.h */,
+				DD6B104A1C59A33400EA67F0 /* MPSessionModel.m */,
+				DD6B104B1C59A33400EA67F0 /* MusicPartnerDownloadEntity.h */,
+				DD6B104C1C59A33400EA67F0 /* MusicPartnerDownloadEntity.m */,
+				DD6B104D1C59A33400EA67F0 /* MusicPartnerDownloadManager.h */,
+				DD6B104E1C59A33400EA67F0 /* MusicPartnerDownloadManager.m */,
+				DD6B104F1C59A33400EA67F0 /* MusicPartnerDownloadTask.h */,
+				DD6B10501C59A33400EA67F0 /* MusicPartnerDownloadTask.m */,
+			);
+			path = MusicDownloadManager;
+			sourceTree = "<group>";
+		};
+		DD6B10551C59A37E00EA67F0 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				DD6B105C1C59A3D900EA67F0 /* AppConfig */,
+				DD6B10561C59A37E00EA67F0 /* AppDelegate.h */,
+				DD6B10571C59A37E00EA67F0 /* AppDelegate.m */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		DD6B105C1C59A3D900EA67F0 /* AppConfig */ = {
+			isa = PBXGroup;
+			children = (
+				DD6B105D1C59A3D900EA67F0 /* AppColorConfig.h */,
+				DD6B105E1C59A3D900EA67F0 /* AppConfig.h */,
+				DD6B105F1C59A3D900EA67F0 /* GTCommontHeader.h */,
+			);
+			path = AppConfig;
+			sourceTree = "<group>";
+		};
 		DDA48A1F1C5749B600ABD9D9 /* FLDownload */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,11 +227,9 @@
 		DDBCA1711C55CB7300E9F8C2 /* MusicPartnerDownload */ = {
 			isa = PBXGroup;
 			children = (
+				DD6B10551C59A37E00EA67F0 /* App */,
 				DDBCA1A71C55D8FE00E9F8C2 /* Library */,
 				DDBCA18C1C55CE4000E9F8C2 /* ViewControllers */,
-				DDBCA1751C55CB7300E9F8C2 /* AppDelegate.h */,
-				DDBCA1761C55CB7300E9F8C2 /* AppDelegate.m */,
-				DDBCA17B1C55CB7300E9F8C2 /* Main.storyboard */,
 				DDBCA17E1C55CB7300E9F8C2 /* Assets.xcassets */,
 				DDBCA1801C55CB7300E9F8C2 /* LaunchScreen.storyboard */,
 				DDBCA1831C55CB7300E9F8C2 /* Info.plist */,
@@ -136,65 +249,24 @@
 		DDBCA18C1C55CE4000E9F8C2 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				DDBCA1991C55D17200E9F8C2 /* MusicDownload */,
-				DDBCA1891C55CE1100E9F8C2 /* MusicListTableCell.h */,
-				DDBCA18A1C55CE1100E9F8C2 /* MusicListTableCell.m */,
-				DDBCA18D1C55CE5100E9F8C2 /* MusicListViewController.h */,
-				DDBCA18E1C55CE5100E9F8C2 /* MusicListViewController.m */,
+				DD6B10231C59A2C700EA67F0 /* Discover */,
+				DD6B10241C59A2C700EA67F0 /* DownLoad */,
+				DD6B10221C59A2BF00EA67F0 /* MyInfo */,
+				DD6B101C1C59A21E00EA67F0 /* BaseTabBarController */,
 				DDA48A1A1C571AB800ABD9D9 /* ViewController.h */,
 				DDA48A1B1C571AB800ABD9D9 /* ViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		DDBCA1991C55D17200E9F8C2 /* MusicDownload */ = {
-			isa = PBXGroup;
-			children = (
-				DDBCA19A1C55D17200E9F8C2 /* MusicDownloadList */,
-			);
-			path = MusicDownload;
-			sourceTree = "<group>";
-		};
-		DDBCA19A1C55D17200E9F8C2 /* MusicDownloadList */ = {
-			isa = PBXGroup;
-			children = (
-				DDBCA19B1C55D17200E9F8C2 /* MusicDownloadList.storyboard */,
-				DDBCA19C1C55D17200E9F8C2 /* MusicDownloadListTableCell.h */,
-				DDBCA19D1C55D17200E9F8C2 /* MusicDownloadListTableCell.m */,
-				DDBCA19E1C55D17200E9F8C2 /* MusicDownloadListViewController.h */,
-				DDBCA19F1C55D17200E9F8C2 /* MusicDownloadListViewController.m */,
-				DDCC61061C589F2900689D34 /* MusicDownloadDataSource.h */,
-				DDCC61071C589F2900689D34 /* MusicDownloadDataSource.m */,
-				DDCC61091C589FC500689D34 /* TaskEntity.h */,
-				DDCC610A1C589FC500689D34 /* TaskEntity.m */,
-			);
-			path = MusicDownloadList;
-			sourceTree = "<group>";
-		};
 		DDBCA1A71C55D8FE00E9F8C2 /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				DDCC610F1C58B22F00689D34 /* MusicDownloadManager */,
+				DD6B10481C59A33400EA67F0 /* MusicDownloadManager */,
 				DDA48A1F1C5749B600ABD9D9 /* FLDownload */,
 			);
 			path = Library;
 			sourceTree = "<group>";
-		};
-		DDCC610F1C58B22F00689D34 /* MusicDownloadManager */ = {
-			isa = PBXGroup;
-			children = (
-				DDCC61111C58B22F00689D34 /* MPSessionModel.h */,
-				DDCC61121C58B22F00689D34 /* MPSessionModel.m */,
-				DDCC61131C58B22F00689D34 /* MusicPartnerDownloadEntity.h */,
-				DDCC61141C58B22F00689D34 /* MusicPartnerDownloadEntity.m */,
-				DDCC61151C58B22F00689D34 /* MusicPartnerDownloadManager.h */,
-				DDCC61161C58B22F00689D34 /* MusicPartnerDownloadManager.m */,
-				DDCC61171C58B22F00689D34 /* MusicPartnerDownloadTask.h */,
-				DDCC61181C58B22F00689D34 /* MusicPartnerDownloadTask.m */,
-			);
-			name = MusicDownloadManager;
-			path = MusicPartnerDownload/ViewControllers/MusicDownload/MusicDownloadManager;
-			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -258,10 +330,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDBCA1A01C55D17200E9F8C2 /* MusicDownloadList.storyboard in Resources */,
+				DD6B106A1C59A6C600EA67F0 /* 1.jpeg in Resources */,
+				DD6B10211C59A24A00EA67F0 /* Main.storyboard in Resources */,
+				DD6B10651C59A42800EA67F0 /* MyInfo.storyboard in Resources */,
 				DDBCA1821C55CB7300E9F8C2 /* LaunchScreen.storyboard in Resources */,
 				DDBCA17F1C55CB7300E9F8C2 /* Assets.xcassets in Resources */,
-				DDBCA17D1C55CB7300E9F8C2 /* Main.storyboard in Resources */,
+				DD6B10401C59A30700EA67F0 /* MusicDownloadList.storyboard in Resources */,
+				DD6B10611C59A41900EA67F0 /* Discover.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,36 +347,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDBCA1A21C55D17200E9F8C2 /* MusicDownloadListViewController.m in Sources */,
-				DDBCA18B1C55CE1100E9F8C2 /* MusicListTableCell.m in Sources */,
-				DDBCA1771C55CB7300E9F8C2 /* AppDelegate.m in Sources */,
-				DDCC61081C589F2900689D34 /* MusicDownloadDataSource.m in Sources */,
+				DD6B10541C59A33400EA67F0 /* MusicPartnerDownloadTask.m in Sources */,
+				DD6B10581C59A37E00EA67F0 /* AppDelegate.m in Sources */,
 				DDA48A1C1C571AB800ABD9D9 /* ViewController.m in Sources */,
-				DDCC611C1C58B22F00689D34 /* MusicPartnerDownloadTask.m in Sources */,
-				DDCC610B1C589FC500689D34 /* TaskEntity.m in Sources */,
-				DDBCA18F1C55CE5100E9F8C2 /* MusicListViewController.m in Sources */,
+				DD6B10291C59A2F100EA67F0 /* MusicListTableCell.m in Sources */,
+				DD6B10681C59A52F00EA67F0 /* MyInfoViewController.m in Sources */,
+				DD6B10411C59A30700EA67F0 /* MusicDownloadListTableCell.m in Sources */,
 				DDA48A241C5749B600ABD9D9 /* FLDownloader.m in Sources */,
-				DDCC611B1C58B22F00689D34 /* MusicPartnerDownloadManager.m in Sources */,
-				DDCC61191C58B22F00689D34 /* MPSessionModel.m in Sources */,
-				DDBCA1A11C55D17200E9F8C2 /* MusicDownloadListTableCell.m in Sources */,
-				DDCC611A1C58B22F00689D34 /* MusicPartnerDownloadEntity.m in Sources */,
+				DD6B10201C59A24A00EA67F0 /* BaseTabBarController.m in Sources */,
+				DD6B103F1C59A30700EA67F0 /* MusicDownloadDataSource.m in Sources */,
+				DD6B10511C59A33400EA67F0 /* MPSessionModel.m in Sources */,
+				DD6B10431C59A30700EA67F0 /* TaskEntity.m in Sources */,
 				DDA48A251C5749B600ABD9D9 /* FLDownloadTask.m in Sources */,
+				DD6B10421C59A30700EA67F0 /* MusicDownloadListViewController.m in Sources */,
 				DDA48A281C574B3600ABD9D9 /* MPDownLoadManager.m in Sources */,
+				DD6B10531C59A33400EA67F0 /* MusicPartnerDownloadManager.m in Sources */,
+				DD6B10521C59A33400EA67F0 /* MusicPartnerDownloadEntity.m in Sources */,
 				DDBCA1741C55CB7300E9F8C2 /* main.m in Sources */,
+				DD6B102A1C59A2F100EA67F0 /* MusicListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DDBCA17B1C55CB7300E9F8C2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DDBCA17C1C55CB7300E9F8C2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DDBCA1801C55CB7300E9F8C2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
