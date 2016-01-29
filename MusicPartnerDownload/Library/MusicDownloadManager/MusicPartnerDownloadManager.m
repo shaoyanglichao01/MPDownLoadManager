@@ -356,8 +356,7 @@
  */
 -(void)startAllTask{
     for (MusicPartnerDownloadTask *task in self.mpDownloadTasks.allValues) {
-        if (task.mpSessionModel.mpDownloadState == MPDownloadStateSuspended) {
-            
+        if (task.mpSessionModel.mpDownloadState == MPDownloadStateSuspended || task.mpSessionModel.mpDownloadState == MPDownloadStateFailed) {
             [task start:task.mpSessionModel.urlString];
         }
     }

@@ -28,6 +28,9 @@
     }else if (self.taskEntity.taskDownloadState == TaskStateSuspended){
          [[MusicPartnerDownloadManager sharedInstance] start:self.downloadUrl];
         [self.stopStartBtn setImage:[UIImage imageNamed:@"menu_play"] forState:UIControlStateNormal];
+    }else{
+        [[MusicPartnerDownloadManager sharedInstance] start:self.downloadUrl];
+        [self.stopStartBtn setImage:[UIImage imageNamed:@"menu_play"] forState:UIControlStateNormal];
     }
     
     
@@ -49,6 +52,8 @@
         [self.stopStartBtn setImage:[UIImage imageNamed:@"menu_play"] forState:UIControlStateNormal];
     }else if (taskEntity.taskDownloadState == TaskStateRunning){
         [self.stopStartBtn setImage:[UIImage imageNamed:@"menu_pause"] forState:UIControlStateNormal];
+    }else{
+         [self.stopStartBtn setImage:[UIImage imageNamed:@"menu_play"] forState:UIControlStateNormal];
     }
     
     __weak typeof(self) weakSelf = self;

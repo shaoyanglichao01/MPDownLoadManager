@@ -74,22 +74,32 @@
  */
 -(void)startDownLoadUnFinishedTasks{
     
+    
+    __weak typeof(self) weakSelf = self;
     for (TaskEntity *taskEntity in self.unFinishedTasks) {
         [[MusicPartnerDownloadManager sharedInstance] downLoad:taskEntity.downLoadUrl progressBlock:^(CGFloat progress, CGFloat totalMBRead, CGFloat totalMBExpectedToRead) {
             
-            taskEntity.progressBlock(progress,totalMBRead,totalMBExpectedToRead);
+            
+            taskEntity.progress = progress;
+            if (taskEntity.progressBlock) {
+                 taskEntity.progressBlock(progress,totalMBRead,totalMBExpectedToRead);
+            }
+            
+           
         } completeBlock:^(MPDownloadState mpDownloadState, NSString *downLoadUrlString) {
             taskEntity.taskDownloadState = (TaskDownloadState)mpDownloadState;
             if (mpDownloadState == MPDownloadStateCompleted) {
-                [self deleteFinishedTasks:downLoadUrlString];
+                [weakSelf deleteFinishedTasks:downLoadUrlString];
             }
             
             taskEntity.progress = [[MusicPartnerDownloadManager sharedInstance] progress:downLoadUrlString];
+            if (taskEntity.completeBlock) {
+                taskEntity.completeBlock(taskEntity.taskDownloadState,downLoadUrlString);
+            }
             
-            taskEntity.completeBlock(taskEntity.taskDownloadState,downLoadUrlString);
             
-            if (self.downloadStatusChangeBlock) {
-                self.downloadStatusChangeBlock(taskEntity.taskDownloadState,downLoadUrlString);
+            if (weakSelf.downloadStatusChangeBlock) {
+                weakSelf.downloadStatusChangeBlock(taskEntity.taskDownloadState,downLoadUrlString);
             }
         }];
     }

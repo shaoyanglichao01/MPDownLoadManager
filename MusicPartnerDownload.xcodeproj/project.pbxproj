@@ -21,6 +21,14 @@
 		DD2C563E1C5AF2CE00CEC6EA /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2C562E1C5AF2CE00CEC6EA /* View+MASAdditions.m */; };
 		DD2C563F1C5AF2CE00CEC6EA /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2C56311C5AF2CE00CEC6EA /* ViewController+MASAdditions.m */; };
 		DD2C56401C5AF2CE00CEC6EA /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = DD2C56321C5AF2CE00CEC6EA /* README.md */; };
+		DD2C564A1C5AFD9900CEC6EA /* gongfuxiongmao.png in Resources */ = {isa = PBXBuildFile; fileRef = DD2C56421C5AFD9900CEC6EA /* gongfuxiongmao.png */; };
+		DD2C564B1C5AFD9900CEC6EA /* lieren.png in Resources */ = {isa = PBXBuildFile; fileRef = DD2C56431C5AFD9900CEC6EA /* lieren.png */; };
+		DD2C564C1C5AFD9900CEC6EA /* meirenyu.png in Resources */ = {isa = PBXBuildFile; fileRef = DD2C56441C5AFD9900CEC6EA /* meirenyu.png */; };
+		DD2C564D1C5AFD9900CEC6EA /* sandabaigujing.png in Resources */ = {isa = PBXBuildFile; fileRef = DD2C56451C5AFD9900CEC6EA /* sandabaigujing.png */; };
+		DD2C564E1C5AFD9900CEC6EA /* taipingyang.png in Resources */ = {isa = PBXBuildFile; fileRef = DD2C56461C5AFD9900CEC6EA /* taipingyang.png */; };
+		DD2C564F1C5AFD9900CEC6EA /* xiaohuangren.png in Resources */ = {isa = PBXBuildFile; fileRef = DD2C56471C5AFD9900CEC6EA /* xiaohuangren.png */; };
+		DD2C56501C5AFD9900CEC6EA /* xiongchumo.png in Resources */ = {isa = PBXBuildFile; fileRef = DD2C56481C5AFD9900CEC6EA /* xiongchumo.png */; };
+		DD2C56511C5AFD9900CEC6EA /* yuanlijuexing.png in Resources */ = {isa = PBXBuildFile; fileRef = DD2C56491C5AFD9900CEC6EA /* yuanlijuexing.png */; };
 		DD6B10201C59A24A00EA67F0 /* BaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6B101E1C59A24A00EA67F0 /* BaseTabBarController.m */; };
 		DD6B10211C59A24A00EA67F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD6B101F1C59A24A00EA67F0 /* Main.storyboard */; };
 		DD6B10291C59A2F100EA67F0 /* MusicListTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6B10261C59A2F100EA67F0 /* MusicListTableCell.m */; };
@@ -45,9 +53,6 @@
 		DD887C721C59F002006E7A63 /* MusicDownloadDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DD887C711C59F002006E7A63 /* MusicDownloadDataSource.m */; };
 		DD887C761C59F02B006E7A63 /* DownLoadCompleteDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DD887C751C59F02B006E7A63 /* DownLoadCompleteDataSource.m */; };
 		DD887C781C59FBC1006E7A63 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD887C771C59FBC1006E7A63 /* MediaPlayer.framework */; };
-		DD887C841C5A2C43006E7A63 /* jinganglang.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DD887C811C5A2C43006E7A63 /* jinganglang.jpg */; };
-		DD887C851C5A2C43006E7A63 /* huantaipingyang.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DD887C821C5A2C43006E7A63 /* huantaipingyang.jpg */; };
-		DD887C861C5A2C43006E7A63 /* bianxingjingang.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DD887C831C5A2C43006E7A63 /* bianxingjingang.jpg */; };
 		DDA48A1C1C571AB800ABD9D9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA48A1B1C571AB800ABD9D9 /* ViewController.m */; };
 		DDA48A241C5749B600ABD9D9 /* FLDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA48A211C5749B600ABD9D9 /* FLDownloader.m */; };
 		DDA48A251C5749B600ABD9D9 /* FLDownloadTask.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA48A231C5749B600ABD9D9 /* FLDownloadTask.m */; };
@@ -88,6 +93,14 @@
 		DD2C56301C5AF2CE00CEC6EA /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
 		DD2C56311C5AF2CE00CEC6EA /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
 		DD2C56321C5AF2CE00CEC6EA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		DD2C56421C5AFD9900CEC6EA /* gongfuxiongmao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gongfuxiongmao.png; sourceTree = "<group>"; };
+		DD2C56431C5AFD9900CEC6EA /* lieren.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lieren.png; sourceTree = "<group>"; };
+		DD2C56441C5AFD9900CEC6EA /* meirenyu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = meirenyu.png; sourceTree = "<group>"; };
+		DD2C56451C5AFD9900CEC6EA /* sandabaigujing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sandabaigujing.png; sourceTree = "<group>"; };
+		DD2C56461C5AFD9900CEC6EA /* taipingyang.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = taipingyang.png; sourceTree = "<group>"; };
+		DD2C56471C5AFD9900CEC6EA /* xiaohuangren.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xiaohuangren.png; sourceTree = "<group>"; };
+		DD2C56481C5AFD9900CEC6EA /* xiongchumo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xiongchumo.png; sourceTree = "<group>"; };
+		DD2C56491C5AFD9900CEC6EA /* yuanlijuexing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yuanlijuexing.png; sourceTree = "<group>"; };
 		DD6B101D1C59A24A00EA67F0 /* BaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabBarController.h; sourceTree = "<group>"; };
 		DD6B101E1C59A24A00EA67F0 /* BaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarController.m; sourceTree = "<group>"; };
 		DD6B101F1C59A24A00EA67F0 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -133,9 +146,6 @@
 		DD887C741C59F02B006E7A63 /* DownLoadCompleteDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownLoadCompleteDataSource.h; sourceTree = "<group>"; };
 		DD887C751C59F02B006E7A63 /* DownLoadCompleteDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownLoadCompleteDataSource.m; sourceTree = "<group>"; };
 		DD887C771C59FBC1006E7A63 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
-		DD887C811C5A2C43006E7A63 /* jinganglang.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jinganglang.jpg; sourceTree = "<group>"; };
-		DD887C821C5A2C43006E7A63 /* huantaipingyang.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = huantaipingyang.jpg; sourceTree = "<group>"; };
-		DD887C831C5A2C43006E7A63 /* bianxingjingang.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bianxingjingang.jpg; sourceTree = "<group>"; };
 		DDA48A1A1C571AB800ABD9D9 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		DDA48A1B1C571AB800ABD9D9 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		DDA48A201C5749B600ABD9D9 /* FLDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLDownloader.h; sourceTree = "<group>"; };
@@ -214,6 +224,21 @@
 				DD2C56311C5AF2CE00CEC6EA /* ViewController+MASAdditions.m */,
 			);
 			path = Masonry;
+			sourceTree = "<group>";
+		};
+		DD2C56411C5AFD9900CEC6EA /* images */ = {
+			isa = PBXGroup;
+			children = (
+				DD2C56421C5AFD9900CEC6EA /* gongfuxiongmao.png */,
+				DD2C56431C5AFD9900CEC6EA /* lieren.png */,
+				DD2C56441C5AFD9900CEC6EA /* meirenyu.png */,
+				DD2C56451C5AFD9900CEC6EA /* sandabaigujing.png */,
+				DD2C56461C5AFD9900CEC6EA /* taipingyang.png */,
+				DD2C56471C5AFD9900CEC6EA /* xiaohuangren.png */,
+				DD2C56481C5AFD9900CEC6EA /* xiongchumo.png */,
+				DD2C56491C5AFD9900CEC6EA /* yuanlijuexing.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 		DD6B101C1C59A21E00EA67F0 /* BaseTabBarController */ = {
@@ -354,9 +379,7 @@
 		DD887C581C59D5B8006E7A63 /* Discover */ = {
 			isa = PBXGroup;
 			children = (
-				DD887C811C5A2C43006E7A63 /* jinganglang.jpg */,
-				DD887C821C5A2C43006E7A63 /* huantaipingyang.jpg */,
-				DD887C831C5A2C43006E7A63 /* bianxingjingang.jpg */,
+				DD2C56411C5AFD9900CEC6EA /* images */,
 				DD887C591C59D5B8006E7A63 /* Discover.plist */,
 			);
 			path = Discover;
@@ -530,18 +553,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD887C861C5A2C43006E7A63 /* bianxingjingang.jpg in Resources */,
+				DD2C564F1C5AFD9900CEC6EA /* xiaohuangren.png in Resources */,
 				DD6B10211C59A24A00EA67F0 /* Main.storyboard in Resources */,
+				DD2C56501C5AFD9900CEC6EA /* xiongchumo.png in Resources */,
+				DD2C564C1C5AFD9900CEC6EA /* meirenyu.png in Resources */,
 				DDBCA1821C55CB7300E9F8C2 /* LaunchScreen.storyboard in Resources */,
-				DD887C841C5A2C43006E7A63 /* jinganglang.jpg in Resources */,
+				DD2C564D1C5AFD9900CEC6EA /* sandabaigujing.png in Resources */,
 				DD2C56331C5AF2CE00CEC6EA /* DTKDropdownMenuView.bundle in Resources */,
+				DD2C564B1C5AFD9900CEC6EA /* lieren.png in Resources */,
 				DDBCA17F1C55CB7300E9F8C2 /* Assets.xcassets in Resources */,
 				DD2C56351C5AF2CE00CEC6EA /* LICENSE in Resources */,
 				DD6B10401C59A30700EA67F0 /* MusicDownloadList.storyboard in Resources */,
 				DD6B10611C59A41900EA67F0 /* Discover.storyboard in Resources */,
-				DD887C851C5A2C43006E7A63 /* huantaipingyang.jpg in Resources */,
+				DD2C564A1C5AFD9900CEC6EA /* gongfuxiongmao.png in Resources */,
 				DD6B106D1C59AC0900EA67F0 /* Mine.storyboard in Resources */,
+				DD2C56511C5AFD9900CEC6EA /* yuanlijuexing.png in Resources */,
 				DD887C5A1C59D5B8006E7A63 /* Discover.plist in Resources */,
+				DD2C564E1C5AFD9900CEC6EA /* taipingyang.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

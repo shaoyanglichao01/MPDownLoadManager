@@ -46,12 +46,13 @@
     };
     
     [self.mainTableView setTableFooterView:[[UIView alloc ] init]];
+    [self loadNewTask];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadNewTask) name:MpDownLoadingTask object:nil];
+    
+    
 }
 
--(void)viewDidAppear:(BOOL)animated{
-    [super viewDidAppear:animated];
-    [self loadNewTask];
-}
 
 -(void)loadNewTask{
     
