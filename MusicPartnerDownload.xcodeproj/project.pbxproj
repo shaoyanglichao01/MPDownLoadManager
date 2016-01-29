@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD2C56331C5AF2CE00CEC6EA /* DTKDropdownMenuView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DD2C56141C5AF2CE00CEC6EA /* DTKDropdownMenuView.bundle */; };
+		DD2C56341C5AF2CE00CEC6EA /* DTKDropdownMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2C56161C5AF2CE00CEC6EA /* DTKDropdownMenuView.m */; };
+		DD2C56351C5AF2CE00CEC6EA /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = DD2C56171C5AF2CE00CEC6EA /* LICENSE */; };
+		DD2C56361C5AF2CE00CEC6EA /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2C561A1C5AF2CE00CEC6EA /* MASCompositeConstraint.m */; };
+		DD2C56371C5AF2CE00CEC6EA /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2C561D1C5AF2CE00CEC6EA /* MASConstraint.m */; };
+		DD2C56381C5AF2CE00CEC6EA /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2C561F1C5AF2CE00CEC6EA /* MASConstraintMaker.m */; };
+		DD2C56391C5AF2CE00CEC6EA /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2C56211C5AF2CE00CEC6EA /* MASLayoutConstraint.m */; };
+		DD2C563A1C5AF2CE00CEC6EA /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2C56251C5AF2CE00CEC6EA /* MASViewAttribute.m */; };
+		DD2C563B1C5AF2CE00CEC6EA /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2C56271C5AF2CE00CEC6EA /* MASViewConstraint.m */; };
+		DD2C563C1C5AF2CE00CEC6EA /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2C56291C5AF2CE00CEC6EA /* NSArray+MASAdditions.m */; };
+		DD2C563D1C5AF2CE00CEC6EA /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2C562C1C5AF2CE00CEC6EA /* NSLayoutConstraint+MASDebugAdditions.m */; };
+		DD2C563E1C5AF2CE00CEC6EA /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2C562E1C5AF2CE00CEC6EA /* View+MASAdditions.m */; };
+		DD2C563F1C5AF2CE00CEC6EA /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2C56311C5AF2CE00CEC6EA /* ViewController+MASAdditions.m */; };
+		DD2C56401C5AF2CE00CEC6EA /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = DD2C56321C5AF2CE00CEC6EA /* README.md */; };
 		DD6B10201C59A24A00EA67F0 /* BaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6B101E1C59A24A00EA67F0 /* BaseTabBarController.m */; };
 		DD6B10211C59A24A00EA67F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD6B101F1C59A24A00EA67F0 /* Main.storyboard */; };
 		DD6B10291C59A2F100EA67F0 /* MusicListTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6B10261C59A2F100EA67F0 /* MusicListTableCell.m */; };
@@ -31,8 +45,6 @@
 		DD887C721C59F002006E7A63 /* MusicDownloadDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DD887C711C59F002006E7A63 /* MusicDownloadDataSource.m */; };
 		DD887C761C59F02B006E7A63 /* DownLoadCompleteDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DD887C751C59F02B006E7A63 /* DownLoadCompleteDataSource.m */; };
 		DD887C781C59FBC1006E7A63 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD887C771C59FBC1006E7A63 /* MediaPlayer.framework */; };
-		DD887C7C1C5A089A006E7A63 /* Toast+UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD887C7B1C5A089A006E7A63 /* Toast+UIView.m */; };
-		DD887C801C5A0E18006E7A63 /* PopViewLikeQQView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD887C7F1C5A0E18006E7A63 /* PopViewLikeQQView.m */; };
 		DD887C841C5A2C43006E7A63 /* jinganglang.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DD887C811C5A2C43006E7A63 /* jinganglang.jpg */; };
 		DD887C851C5A2C43006E7A63 /* huantaipingyang.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DD887C821C5A2C43006E7A63 /* huantaipingyang.jpg */; };
 		DD887C861C5A2C43006E7A63 /* bianxingjingang.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DD887C831C5A2C43006E7A63 /* bianxingjingang.jpg */; };
@@ -46,6 +58,36 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DD2C56141C5AF2CE00CEC6EA /* DTKDropdownMenuView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DTKDropdownMenuView.bundle; sourceTree = "<group>"; };
+		DD2C56151C5AF2CE00CEC6EA /* DTKDropdownMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTKDropdownMenuView.h; sourceTree = "<group>"; };
+		DD2C56161C5AF2CE00CEC6EA /* DTKDropdownMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTKDropdownMenuView.m; sourceTree = "<group>"; };
+		DD2C56171C5AF2CE00CEC6EA /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		DD2C56191C5AF2CE00CEC6EA /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
+		DD2C561A1C5AF2CE00CEC6EA /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
+		DD2C561B1C5AF2CE00CEC6EA /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
+		DD2C561C1C5AF2CE00CEC6EA /* MASConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraint.h; sourceTree = "<group>"; };
+		DD2C561D1C5AF2CE00CEC6EA /* MASConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraint.m; sourceTree = "<group>"; };
+		DD2C561E1C5AF2CE00CEC6EA /* MASConstraintMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraintMaker.h; sourceTree = "<group>"; };
+		DD2C561F1C5AF2CE00CEC6EA /* MASConstraintMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraintMaker.m; sourceTree = "<group>"; };
+		DD2C56201C5AF2CE00CEC6EA /* MASLayoutConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASLayoutConstraint.h; sourceTree = "<group>"; };
+		DD2C56211C5AF2CE00CEC6EA /* MASLayoutConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASLayoutConstraint.m; sourceTree = "<group>"; };
+		DD2C56221C5AF2CE00CEC6EA /* Masonry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Masonry.h; sourceTree = "<group>"; };
+		DD2C56231C5AF2CE00CEC6EA /* MASUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASUtilities.h; sourceTree = "<group>"; };
+		DD2C56241C5AF2CE00CEC6EA /* MASViewAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewAttribute.h; sourceTree = "<group>"; };
+		DD2C56251C5AF2CE00CEC6EA /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
+		DD2C56261C5AF2CE00CEC6EA /* MASViewConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewConstraint.h; sourceTree = "<group>"; };
+		DD2C56271C5AF2CE00CEC6EA /* MASViewConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewConstraint.m; sourceTree = "<group>"; };
+		DD2C56281C5AF2CE00CEC6EA /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASAdditions.h"; sourceTree = "<group>"; };
+		DD2C56291C5AF2CE00CEC6EA /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+MASAdditions.m"; sourceTree = "<group>"; };
+		DD2C562A1C5AF2CE00CEC6EA /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		DD2C562B1C5AF2CE00CEC6EA /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
+		DD2C562C1C5AF2CE00CEC6EA /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
+		DD2C562D1C5AF2CE00CEC6EA /* View+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASAdditions.h"; sourceTree = "<group>"; };
+		DD2C562E1C5AF2CE00CEC6EA /* View+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "View+MASAdditions.m"; sourceTree = "<group>"; };
+		DD2C562F1C5AF2CE00CEC6EA /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		DD2C56301C5AF2CE00CEC6EA /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
+		DD2C56311C5AF2CE00CEC6EA /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
+		DD2C56321C5AF2CE00CEC6EA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		DD6B101D1C59A24A00EA67F0 /* BaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabBarController.h; sourceTree = "<group>"; };
 		DD6B101E1C59A24A00EA67F0 /* BaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarController.m; sourceTree = "<group>"; };
 		DD6B101F1C59A24A00EA67F0 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -91,10 +133,6 @@
 		DD887C741C59F02B006E7A63 /* DownLoadCompleteDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownLoadCompleteDataSource.h; sourceTree = "<group>"; };
 		DD887C751C59F02B006E7A63 /* DownLoadCompleteDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownLoadCompleteDataSource.m; sourceTree = "<group>"; };
 		DD887C771C59FBC1006E7A63 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
-		DD887C7A1C5A089A006E7A63 /* Toast+UIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Toast+UIView.h"; sourceTree = "<group>"; };
-		DD887C7B1C5A089A006E7A63 /* Toast+UIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Toast+UIView.m"; sourceTree = "<group>"; };
-		DD887C7E1C5A0E18006E7A63 /* PopViewLikeQQView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopViewLikeQQView.h; sourceTree = "<group>"; };
-		DD887C7F1C5A0E18006E7A63 /* PopViewLikeQQView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopViewLikeQQView.m; sourceTree = "<group>"; };
 		DD887C811C5A2C43006E7A63 /* jinganglang.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jinganglang.jpg; sourceTree = "<group>"; };
 		DD887C821C5A2C43006E7A63 /* huantaipingyang.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = huantaipingyang.jpg; sourceTree = "<group>"; };
 		DD887C831C5A2C43006E7A63 /* bianxingjingang.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bianxingjingang.jpg; sourceTree = "<group>"; };
@@ -125,6 +163,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD2C56121C5AF2CE00CEC6EA /* DTKDropdownMenu */ = {
+			isa = PBXGroup;
+			children = (
+				DD2C56131C5AF2CE00CEC6EA /* DTKDropdownMenuView */,
+				DD2C56171C5AF2CE00CEC6EA /* LICENSE */,
+				DD2C56181C5AF2CE00CEC6EA /* Masonry */,
+				DD2C56321C5AF2CE00CEC6EA /* README.md */,
+			);
+			path = DTKDropdownMenu;
+			sourceTree = "<group>";
+		};
+		DD2C56131C5AF2CE00CEC6EA /* DTKDropdownMenuView */ = {
+			isa = PBXGroup;
+			children = (
+				DD2C56141C5AF2CE00CEC6EA /* DTKDropdownMenuView.bundle */,
+				DD2C56151C5AF2CE00CEC6EA /* DTKDropdownMenuView.h */,
+				DD2C56161C5AF2CE00CEC6EA /* DTKDropdownMenuView.m */,
+			);
+			path = DTKDropdownMenuView;
+			sourceTree = "<group>";
+		};
+		DD2C56181C5AF2CE00CEC6EA /* Masonry */ = {
+			isa = PBXGroup;
+			children = (
+				DD2C56191C5AF2CE00CEC6EA /* MASCompositeConstraint.h */,
+				DD2C561A1C5AF2CE00CEC6EA /* MASCompositeConstraint.m */,
+				DD2C561B1C5AF2CE00CEC6EA /* MASConstraint+Private.h */,
+				DD2C561C1C5AF2CE00CEC6EA /* MASConstraint.h */,
+				DD2C561D1C5AF2CE00CEC6EA /* MASConstraint.m */,
+				DD2C561E1C5AF2CE00CEC6EA /* MASConstraintMaker.h */,
+				DD2C561F1C5AF2CE00CEC6EA /* MASConstraintMaker.m */,
+				DD2C56201C5AF2CE00CEC6EA /* MASLayoutConstraint.h */,
+				DD2C56211C5AF2CE00CEC6EA /* MASLayoutConstraint.m */,
+				DD2C56221C5AF2CE00CEC6EA /* Masonry.h */,
+				DD2C56231C5AF2CE00CEC6EA /* MASUtilities.h */,
+				DD2C56241C5AF2CE00CEC6EA /* MASViewAttribute.h */,
+				DD2C56251C5AF2CE00CEC6EA /* MASViewAttribute.m */,
+				DD2C56261C5AF2CE00CEC6EA /* MASViewConstraint.h */,
+				DD2C56271C5AF2CE00CEC6EA /* MASViewConstraint.m */,
+				DD2C56281C5AF2CE00CEC6EA /* NSArray+MASAdditions.h */,
+				DD2C56291C5AF2CE00CEC6EA /* NSArray+MASAdditions.m */,
+				DD2C562A1C5AF2CE00CEC6EA /* NSArray+MASShorthandAdditions.h */,
+				DD2C562B1C5AF2CE00CEC6EA /* NSLayoutConstraint+MASDebugAdditions.h */,
+				DD2C562C1C5AF2CE00CEC6EA /* NSLayoutConstraint+MASDebugAdditions.m */,
+				DD2C562D1C5AF2CE00CEC6EA /* View+MASAdditions.h */,
+				DD2C562E1C5AF2CE00CEC6EA /* View+MASAdditions.m */,
+				DD2C562F1C5AF2CE00CEC6EA /* View+MASShorthandAdditions.h */,
+				DD2C56301C5AF2CE00CEC6EA /* ViewController+MASAdditions.h */,
+				DD2C56311C5AF2CE00CEC6EA /* ViewController+MASAdditions.m */,
+			);
+			path = Masonry;
+			sourceTree = "<group>";
+		};
 		DD6B101C1C59A21E00EA67F0 /* BaseTabBarController */ = {
 			isa = PBXGroup;
 			children = (
@@ -298,24 +389,6 @@
 			path = DownLoadComplete;
 			sourceTree = "<group>";
 		};
-		DD887C791C5A089A006E7A63 /* Toast */ = {
-			isa = PBXGroup;
-			children = (
-				DD887C7A1C5A089A006E7A63 /* Toast+UIView.h */,
-				DD887C7B1C5A089A006E7A63 /* Toast+UIView.m */,
-			);
-			path = Toast;
-			sourceTree = "<group>";
-		};
-		DD887C7D1C5A0E0F006E7A63 /* PopViewLike */ = {
-			isa = PBXGroup;
-			children = (
-				DD887C7E1C5A0E18006E7A63 /* PopViewLikeQQView.h */,
-				DD887C7F1C5A0E18006E7A63 /* PopViewLikeQQView.m */,
-			);
-			path = PopViewLike;
-			sourceTree = "<group>";
-		};
 		DDA48A1F1C5749B600ABD9D9 /* FLDownload */ = {
 			isa = PBXGroup;
 			children = (
@@ -388,8 +461,7 @@
 		DDBCA1A71C55D8FE00E9F8C2 /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				DD887C7D1C5A0E0F006E7A63 /* PopViewLike */,
-				DD887C791C5A089A006E7A63 /* Toast */,
+				DD2C56121C5AF2CE00CEC6EA /* DTKDropdownMenu */,
 				DD6B10481C59A33400EA67F0 /* MusicDownloadManager */,
 				DDA48A1F1C5749B600ABD9D9 /* FLDownload */,
 			);
@@ -462,7 +534,9 @@
 				DD6B10211C59A24A00EA67F0 /* Main.storyboard in Resources */,
 				DDBCA1821C55CB7300E9F8C2 /* LaunchScreen.storyboard in Resources */,
 				DD887C841C5A2C43006E7A63 /* jinganglang.jpg in Resources */,
+				DD2C56331C5AF2CE00CEC6EA /* DTKDropdownMenuView.bundle in Resources */,
 				DDBCA17F1C55CB7300E9F8C2 /* Assets.xcassets in Resources */,
+				DD2C56351C5AF2CE00CEC6EA /* LICENSE in Resources */,
 				DD6B10401C59A30700EA67F0 /* MusicDownloadList.storyboard in Resources */,
 				DD6B10611C59A41900EA67F0 /* Discover.storyboard in Resources */,
 				DD887C851C5A2C43006E7A63 /* huantaipingyang.jpg in Resources */,
@@ -478,16 +552,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD887C7C1C5A089A006E7A63 /* Toast+UIView.m in Sources */,
 				DD6B10741C59AEB000EA67F0 /* BaseViewController.m in Sources */,
 				DD6B10541C59A33400EA67F0 /* MusicPartnerDownloadTask.m in Sources */,
 				DD887C721C59F002006E7A63 /* MusicDownloadDataSource.m in Sources */,
 				DD6B10581C59A37E00EA67F0 /* AppDelegate.m in Sources */,
+				DD2C56361C5AF2CE00CEC6EA /* MASCompositeConstraint.m in Sources */,
+				DD2C563A1C5AF2CE00CEC6EA /* MASViewAttribute.m in Sources */,
+				DD2C56401C5AF2CE00CEC6EA /* README.md in Sources */,
 				DD887C631C59DFE9006E7A63 /* UITabBarController+MPDownLoad.m in Sources */,
 				DDA48A1C1C571AB800ABD9D9 /* ViewController.m in Sources */,
 				DD887C6A1C59EEE7006E7A63 /* MineTableCell.m in Sources */,
 				DD6B10291C59A2F100EA67F0 /* MusicListTableCell.m in Sources */,
 				DD6B10411C59A30700EA67F0 /* MusicDownloadListTableCell.m in Sources */,
+				DD2C563F1C5AF2CE00CEC6EA /* ViewController+MASAdditions.m in Sources */,
+				DD2C563D1C5AF2CE00CEC6EA /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				DD2C56341C5AF2CE00CEC6EA /* DTKDropdownMenuView.m in Sources */,
+				DD2C56391C5AF2CE00CEC6EA /* MASLayoutConstraint.m in Sources */,
 				DD6B10701C59AC1200EA67F0 /* MineViewController.m in Sources */,
 				DD887C541C59D37D006E7A63 /* DiscoverEntity.m in Sources */,
 				DD887C761C59F02B006E7A63 /* DownLoadCompleteDataSource.m in Sources */,
@@ -496,10 +576,14 @@
 				DD6B10511C59A33400EA67F0 /* MPSessionModel.m in Sources */,
 				DD6B10431C59A30700EA67F0 /* TaskEntity.m in Sources */,
 				DDA48A251C5749B600ABD9D9 /* FLDownloadTask.m in Sources */,
+				DD2C563E1C5AF2CE00CEC6EA /* View+MASAdditions.m in Sources */,
 				DD6B10421C59A30700EA67F0 /* MusicDownloadListViewController.m in Sources */,
+				DD2C56371C5AF2CE00CEC6EA /* MASConstraint.m in Sources */,
+				DD2C56381C5AF2CE00CEC6EA /* MASConstraintMaker.m in Sources */,
 				DDA48A281C574B3600ABD9D9 /* MPDownLoadManager.m in Sources */,
 				DD6B10531C59A33400EA67F0 /* MusicPartnerDownloadManager.m in Sources */,
-				DD887C801C5A0E18006E7A63 /* PopViewLikeQQView.m in Sources */,
+				DD2C563B1C5AF2CE00CEC6EA /* MASViewConstraint.m in Sources */,
+				DD2C563C1C5AF2CE00CEC6EA /* NSArray+MASAdditions.m in Sources */,
 				DD6B10521C59A33400EA67F0 /* MusicPartnerDownloadEntity.m in Sources */,
 				DDBCA1741C55CB7300E9F8C2 /* main.m in Sources */,
 				DD6B102A1C59A2F100EA67F0 /* MusicListViewController.m in Sources */,

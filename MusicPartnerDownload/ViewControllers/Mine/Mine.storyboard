@@ -49,7 +49,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8kP-Zw-U5o">
                                                     <rect key="frame" x="0.0" y="10" width="320" height="185"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="panda.png" translatesAutoresizingMaskIntoConstraints="NO" id="XkE-S5-cwU">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XkE-S5-cwU">
                                                             <rect key="frame" x="10" y="35" width="300" height="140"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I Don't Know" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ezX-pR-A1d">
@@ -125,6 +125,5 @@
     </scenes>
     <resources>
         <image name="ic_movie_play" width="46" height="46"/>
-        <image name="panda.png" width="327" height="163"/>
     </resources>
 </document>

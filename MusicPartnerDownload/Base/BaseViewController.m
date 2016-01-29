@@ -22,10 +22,11 @@
 
 
 -(void)showTip:(NSString *)tip{
-    [self.view makeToast:tip
-                duration:2.0
-                position:@"bottom"
-                   title:nil];
+    [[[UIAlertView alloc ] initWithTitle:@""
+                                 message:tip
+                                delegate:nil
+                       cancelButtonTitle:@"确定"
+                       otherButtonTitles:nil, nil]  show];
 }
 
 - (void)didReceiveMemoryWarning {

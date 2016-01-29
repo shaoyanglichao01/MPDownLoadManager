@@ -71,7 +71,7 @@
     // 改变tabBar 上title的颜色 和 字体大小
     [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:GLOBLE_GRAY_COLOR_3, NSForegroundColorAttributeName, [UIFont systemFontOfSize:11], NSFontAttributeName, nil] forState:UIControlStateNormal];
     
-    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont systemFontOfSize:11],NSFontAttributeName,GLOBLE_NAVIGATION_COLOR,NSForegroundColorAttributeName,nil] forState:UIControlStateSelected];
+    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont systemFontOfSize:11],NSFontAttributeName,GLOBLE_TABBAR_COLOR,NSForegroundColorAttributeName,nil] forState:UIControlStateSelected];
     
     // 改变UITabBarItem的title的位置
     [[UITabBarItem appearance] setTitlePositionAdjustment:UIOffsetMake(0.0, -4)];

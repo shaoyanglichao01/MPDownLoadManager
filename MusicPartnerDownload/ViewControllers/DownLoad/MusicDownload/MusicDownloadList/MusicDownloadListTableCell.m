@@ -24,10 +24,10 @@
 
     if (self.taskEntity.taskDownloadState == TaskStateRunning) {
           [[MusicPartnerDownloadManager sharedInstance] pause:self.downloadUrl];
-        [self.stopStartBtn setImage:[UIImage imageNamed:@"pause"] forState:UIControlStateNormal];
+        [self.stopStartBtn setImage:[UIImage imageNamed:@"menu_pause"] forState:UIControlStateNormal];
     }else if (self.taskEntity.taskDownloadState == TaskStateSuspended){
          [[MusicPartnerDownloadManager sharedInstance] start:self.downloadUrl];
-        [self.stopStartBtn setImage:[UIImage imageNamed:@"play"] forState:UIControlStateNormal];
+        [self.stopStartBtn setImage:[UIImage imageNamed:@"menu_play"] forState:UIControlStateNormal];
     }
     
     
@@ -46,9 +46,9 @@
     self.musicDownloadPercent.text =  [NSString stringWithFormat:@"%.3f",taskEntity.progress];
     
     if (taskEntity.taskDownloadState == TaskStateSuspended) {
-        [self.stopStartBtn setImage:[UIImage imageNamed:@"play"] forState:UIControlStateNormal];
+        [self.stopStartBtn setImage:[UIImage imageNamed:@"menu_play"] forState:UIControlStateNormal];
     }else if (taskEntity.taskDownloadState == TaskStateRunning){
-        [self.stopStartBtn setImage:[UIImage imageNamed:@"pause"] forState:UIControlStateNormal];
+        [self.stopStartBtn setImage:[UIImage imageNamed:@"menu_pause"] forState:UIControlStateNormal];
     }
     
     __weak typeof(self) weakSelf = self;
@@ -61,10 +61,10 @@
         if (mpDownloadState == TaskStateSuspended) {
             
             weakSelf.taskEntity.taskDownloadState = TaskStateSuspended;
-           [weakSelf.stopStartBtn setImage:[UIImage imageNamed:@"play"] forState:UIControlStateNormal];
+           [weakSelf.stopStartBtn setImage:[UIImage imageNamed:@"menu_play"] forState:UIControlStateNormal];
         }else if (mpDownloadState == TaskStateRunning){
             weakSelf.taskEntity.taskDownloadState = TaskStateRunning;
-            [weakSelf.stopStartBtn setImage:[UIImage imageNamed:@"pause"] forState:UIControlStateNormal];
+            [weakSelf.stopStartBtn setImage:[UIImage imageNamed:@"menu_pause"] forState:UIControlStateNormal];
         }
     };
     

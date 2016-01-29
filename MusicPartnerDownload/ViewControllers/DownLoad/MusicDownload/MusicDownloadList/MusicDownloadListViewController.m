@@ -10,14 +10,12 @@
 #import "MusicDownloadListTableCell.h"
 #import "MusicDownloadDataSource.h"
 #import <MediaPlayer/MediaPlayer.h>
-#import "PopViewLikeQQView.h"
 
+#import "DTKDropdownMenuView.h"
 
 @interface MusicDownloadListViewController ()
 
 @property (nonatomic , strong) MusicDownloadDataSource *dataSource;
-
-- (IBAction)moreAction:(UIButton *)sender;
 
 @end
 
@@ -38,6 +36,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self addRightItem];
     self.dataSource = [[MusicDownloadDataSource alloc ] init];
     
     __weak typeof(self) weakSelf = self;
@@ -82,21 +82,30 @@
     [super didReceiveMemoryWarning];
 }
 
-- (IBAction)moreAction:(UIButton *)sender {
+
+- (void)addRightItem
+{
+    __weak typeof(self) weakSelf = self;
+    DTKDropdownItem *item0 = [DTKDropdownItem itemWithTitle:@"全部删除" iconName:@"menu_delete" callBack:^(NSUInteger index, id info) {
+         [weakSelf.dataSource deleAllTask];
+      
+    }];
+    DTKDropdownItem *item1 = [DTKDropdownItem itemWithTitle:@"全部开始" iconName:@"menu_download" callBack:^(NSUInteger index, id info) {
+                [weakSelf.dataSource startAllTask];
+    }];
+    DTKDropdownItem *item2 = [DTKDropdownItem itemWithTitle:@"全部暂停" iconName:@"menu_pause" callBack:^(NSUInteger index, id info) {
+       [weakSelf.dataSource pauseAllTask];
+    }];
+
+    DTKDropdownMenuView *menuView = [DTKDropdownMenuView dropdownMenuViewWithType:dropDownTypeRightItem frame:CGRectMake(0, 0, 44.f, 44.f) dropdownItems:@[item0,item1,item2] icon:@"more"];
     
-    [PopViewLikeQQView configCustomPopViewWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width - 147, 70, 120, 120)
-                                          imagesArr:@[@"tip_delected",@"tip_download",@"tip_download"]
-                                      dataSourceArr:@[@"全部删除",@"全部开始",@"全部暂停"] anchorPoint:CGPointMake(1, 0)
-                                 seletedRowForIndex:^(NSInteger index) {
-                                     if (index == 0) {
-                                         [self.dataSource deleAllTask];
-                                     }else if (index == 1){
-                                         [self.dataSource startAllTask];
-                                     }else{
-                                          [self.dataSource pauseAllTask];
-                                     }
-                                     
-                                     
-                                 } animation:YES timeForCome:0.3 timeForGo:0.3];
+    menuView.dropWidth = 130.f;
+    menuView.titleFont = [UIFont systemFontOfSize:15.f];
+    menuView.textColor = GLOBLE_GRAY_COLOR_3;
+    menuView.textFont = [UIFont systemFontOfSize:13.f];
+    menuView.cellSeparatorColor = UI_RGBA(229.f, 229.f, 229.f,1);
+    menuView.textFont = [UIFont systemFontOfSize:15.f];
+    menuView.animationDuration = 0.2f;
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:menuView];
 }
 @end

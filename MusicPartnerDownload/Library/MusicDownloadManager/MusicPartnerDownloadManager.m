@@ -356,8 +356,10 @@
  */
 -(void)startAllTask{
     for (MusicPartnerDownloadTask *task in self.mpDownloadTasks.allValues) {
-        [task start:task.mpSessionModel.urlString];
-        
+        if (task.mpSessionModel.mpDownloadState == MPDownloadStateSuspended) {
+            
+            [task start:task.mpSessionModel.urlString];
+        }
     }
 }
 
@@ -366,8 +368,10 @@
  */
 -(void)pauseAllTask{
     for (MusicPartnerDownloadTask *task in self.mpDownloadTasks.allValues) {
+        if (task.mpSessionModel.mpDownloadState == MPDownloadStateRunning) {
+            [task pause:task.mpSessionModel.urlString];
+        }
         
-        [task pause:task.mpSessionModel.urlString];
         
     }
 }
@@ -377,6 +381,9 @@
  */
 -(void)deleAllTask{
     for (NSString *downLoadString in self.mpDownloadTasks.allKeys) {
+        
+        
+        
         [[MusicPartnerDownloadManager sharedInstance] deleteFile:downLoadString];
     }
     

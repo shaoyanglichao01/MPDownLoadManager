@@ -166,18 +166,7 @@
                             <constraint firstItem="ezz-Ff-XSt" firstAttribute="leading" secondItem="yqU-0A-5H3" secondAttribute="leading" id="vhb-Y2-YXq"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="任务" id="sdz-7h-gD5">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="t5Z-Jf-jBc">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ZYP-we-ReM">
-                                <rect key="frame" x="264" y="2" width="40" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="more"/>
-                                <connections>
-                                    <action selector="moreAction:" destination="bw8-oH-Vvx" eventType="touchUpInside" id="edm-kB-eN0"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="任务" id="sdz-7h-gD5"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
@@ -191,6 +180,5 @@
     </scenes>
     <resources>
         <image name="ic_movie_play" width="46" height="46"/>
-        <image name="more" width="20" height="20"/>
     </resources>
 </document>
