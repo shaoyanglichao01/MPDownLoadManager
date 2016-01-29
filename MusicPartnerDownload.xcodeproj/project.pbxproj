@@ -33,6 +33,7 @@
 		DD2C565B1C5B07A900CEC6EA /* DRCellSlideGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2C56581C5B07A900CEC6EA /* DRCellSlideGestureRecognizer.m */; };
 		DD2C565D1C5B1DEA00CEC6EA /* lieren.png in Resources */ = {isa = PBXBuildFile; fileRef = DD2C565C1C5B1DEA00CEC6EA /* lieren.png */; };
 		DD2C56611C5B1FE300CEC6EA /* TYMProgressBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2C56601C5B1FE300CEC6EA /* TYMProgressBarView.m */; };
+		DD2C56711C5B610300CEC6EA /* ODRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2C56701C5B610300CEC6EA /* ODRefreshControl.m */; };
 		DD6B10201C59A24A00EA67F0 /* BaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6B101E1C59A24A00EA67F0 /* BaseTabBarController.m */; };
 		DD6B10211C59A24A00EA67F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD6B101F1C59A24A00EA67F0 /* Main.storyboard */; };
 		DD6B10291C59A2F100EA67F0 /* MusicListTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6B10261C59A2F100EA67F0 /* MusicListTableCell.m */; };
@@ -113,6 +114,8 @@
 		DD2C565C1C5B1DEA00CEC6EA /* lieren.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lieren.png; sourceTree = "<group>"; };
 		DD2C565F1C5B1FE300CEC6EA /* TYMProgressBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYMProgressBarView.h; sourceTree = "<group>"; };
 		DD2C56601C5B1FE300CEC6EA /* TYMProgressBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYMProgressBarView.m; sourceTree = "<group>"; };
+		DD2C566F1C5B610300CEC6EA /* ODRefreshControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODRefreshControl.h; sourceTree = "<group>"; };
+		DD2C56701C5B610300CEC6EA /* ODRefreshControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODRefreshControl.m; sourceTree = "<group>"; };
 		DD6B101D1C59A24A00EA67F0 /* BaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabBarController.h; sourceTree = "<group>"; };
 		DD6B101E1C59A24A00EA67F0 /* BaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarController.m; sourceTree = "<group>"; };
 		DD6B101F1C59A24A00EA67F0 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -273,6 +276,15 @@
 				DD2C56601C5B1FE300CEC6EA /* TYMProgressBarView.m */,
 			);
 			path = TYMProgressBar;
+			sourceTree = "<group>";
+		};
+		DD2C566E1C5B610300CEC6EA /* ODRefreshControl */ = {
+			isa = PBXGroup;
+			children = (
+				DD2C566F1C5B610300CEC6EA /* ODRefreshControl.h */,
+				DD2C56701C5B610300CEC6EA /* ODRefreshControl.m */,
+			);
+			path = ODRefreshControl;
 			sourceTree = "<group>";
 		};
 		DD6B101C1C59A21E00EA67F0 /* BaseTabBarController */ = {
@@ -518,6 +530,7 @@
 		DDBCA1A71C55D8FE00E9F8C2 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				DD2C566E1C5B610300CEC6EA /* ODRefreshControl */,
 				DD2C565E1C5B1FE300CEC6EA /* TYMProgressBar */,
 				DD2C56521C5B07A900CEC6EA /* DRCellSlideGestureRecognizer */,
 				DD2C56121C5AF2CE00CEC6EA /* DTKDropdownMenu */,
@@ -616,6 +629,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD2C56711C5B610300CEC6EA /* ODRefreshControl.m in Sources */,
 				DD2C565A1C5B07A900CEC6EA /* DRCellSlideActionView.m in Sources */,
 				DD6B10741C59AEB000EA67F0 /* BaseViewController.m in Sources */,
 				DD6B10541C59A33400EA67F0 /* MusicPartnerDownloadTask.m in Sources */,

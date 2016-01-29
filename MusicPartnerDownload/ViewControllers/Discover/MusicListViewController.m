@@ -10,7 +10,7 @@
 #import "MusicListTableCell.h"
 #import "MusicDownloadListViewController.h"
 #import "MusicPartnerDownloadManager.h"
-
+#import "ODRefreshControl.h"
 @interface MusicListViewController () <MusicListDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *mainTableView;
@@ -30,8 +30,26 @@
     
     [self.mainTableView setTableFooterView:[[UIView alloc ] init]];
     [self.mainTableView  reloadData];
+    
+    [self initRefreshControl];
+    
+    
 }
 
+-(void)initRefreshControl{
+    ODRefreshControl *refreshControl = [[ODRefreshControl alloc] initInScrollView:self.mainTableView];
+    refreshControl.tintColor =  GLOBLE_TABBAR_COLOR;
+    [refreshControl addTarget:self action:@selector(dropViewDidBeginRefreshing:) forControlEvents:UIControlEventValueChanged];
+}
+
+- (void)dropViewDidBeginRefreshing:(ODRefreshControl *)refreshControl
+{
+    double delayInSeconds = 2.0;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        [refreshControl endRefreshing];
+    });
+}
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
