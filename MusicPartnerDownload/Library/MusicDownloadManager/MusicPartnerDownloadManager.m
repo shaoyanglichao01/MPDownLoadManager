@@ -46,8 +46,13 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         [[NSNotificationCenter defaultCenter] postNotificationName:MpDownLoadingTask object:nil];
     });
-    
-    
+}
+
+// 发送删除下载完成任务通知
+-(void)postDeleteMpDownLoadCompleteTaskNotification{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [[NSNotificationCenter defaultCenter] postNotificationName:MpDownLoadCompleteDeleteTask object:nil];
+    });
 }
 
 // 发送下载完成任务通知
@@ -154,10 +159,10 @@
     
     } completeBlock:^(MPDownloadState mpDownloadState ,NSString *downLoadUrlString) {
         
+        // 修改本地状态
+        [weakSelf saveMPDownLoadTask];
+        
         if (mpDownloadState == MPDownloadStateCompleted) {
-            
-            // 修改本地状态
-            [weakSelf saveMPDownLoadTask];
             
             //　删除本地任务
             [weakSelf.mpDownloadTasks removeObjectForKey:url];
@@ -168,16 +173,11 @@
             // 任务完成
             [weakSelf postMpDownLoadCompleteTaskNotification];
             
-        }else{
-            [weakSelf saveMPDownLoadTask];
         }
         dispatch_async(dispatch_get_main_queue(), ^{
              completeBlock(mpDownloadState,downLoadUrlString);
         });
        
-       
-        
-        
     } mpDownloadState:downLoadStatus];
 }
 
@@ -187,14 +187,18 @@
     // 修改本地状态
     [self saveMPDownLoadTask];
     
-    //　删除本地任务
-    [self.mpDownloadTasks removeObjectForKey:downLoadUrlString];
-  
-    // 下载列表改变
-    [self postDownLoadingTaskNotification];
-    
-    // 任务完成
-    [self postMpDownLoadCompleteTaskNotification];
+    if (mpDownloadState == MPDownloadStateCompleted) {
+        
+        //　删除本地任务
+        [self.mpDownloadTasks removeObjectForKey:downLoadUrlString];
+        
+        // 下载列表改变
+        [self postDownLoadingTaskNotification];
+        
+        // 任务完成
+        [self postMpDownLoadCompleteTaskNotification];
+        
+    }
 }
 
 -(MPDownloadState)getMPDownloadState:(NSString *)url{
@@ -265,9 +269,10 @@
     [downLoadTask deleteFile:url];
     [self.mpDownloadTasks removeObjectForKey:url];
     [self deleteMpDownLoadTask:url];
+
+    // 删除任务
+    [self postDeleteMpDownLoadCompleteTaskNotification];
     
-    // 下载列表改变
-    [self postDownLoadingTaskNotification];
 }
 
 //　删除本地

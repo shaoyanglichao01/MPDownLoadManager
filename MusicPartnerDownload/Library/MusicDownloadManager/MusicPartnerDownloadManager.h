@@ -17,6 +17,8 @@
 // 完成下载任务通知
 #define MpDownLoadCompleteTask @"MpDownLoadCompleteTask"
 
+// 删除已经下载好的任务通知
+#define MpDownLoadCompleteDeleteTask @"MpDownLoadCompleteDeleteTask"
 
 typedef enum {
     MPTaskNoExistTask = 1,      /** 任务不存在 */

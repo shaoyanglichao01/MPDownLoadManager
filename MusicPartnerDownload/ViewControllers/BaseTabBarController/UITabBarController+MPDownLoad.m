@@ -19,15 +19,12 @@
     
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(mpDownLoadCompleteTask) name:MpDownLoadCompleteTask object:nil];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appWillTerminate) name:UIApplicationWillTerminateNotification object:nil];
+
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(mpDeleteCompleteTask) name:MpDownLoadCompleteDeleteTask object:nil];
     
     self.delegate = self;
 }
 
--(void)appWillTerminate{
-    
-}
 
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
     NSInteger selectedIndex = [tabBarController.viewControllers indexOfObject:viewController];
@@ -43,6 +40,11 @@
     [self.viewControllers objectAtIndex:2].tabBarItem.badgeValue =  nil;
 }
 
+-(void)mpDeleteCompleteTask{
+    NSInteger taskCount = [[MusicPartnerDownloadManager sharedInstance] getFinishedTaskCount];
+    [[NSUserDefaults standardUserDefaults] setObject:@(taskCount) forKey:@"mpDownLoadCompleteTaskCount"];
+    
+}
 
 -(void)mpDownLoadCompleteTask{
     NSInteger taskCount = [[MusicPartnerDownloadManager sharedInstance] getFinishedTaskCount];

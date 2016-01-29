@@ -49,6 +49,9 @@
     [self loadNewTask];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadNewTask) name:MpDownLoadingTask object:nil];
+     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadNewTask) name:MpDownLoadCompleteDeleteTask object:nil];
+    
+    
     
     
 }
