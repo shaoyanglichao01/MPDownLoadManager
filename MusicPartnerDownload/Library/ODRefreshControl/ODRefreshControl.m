@@ -24,7 +24,7 @@
 #define kMaxArrowSize       3
 #define kMinArrowRadius     5
 #define kMaxArrowRadius     7
-#define kMaxDistance        53
+#define kMaxDistance        35
 
 @interface ODRefreshControl ()
 
