@@ -12,7 +12,8 @@
 @implementation MusicDownloadListTableCell
 
 - (void)awakeFromNib {
-    
+    self.progressBarView = [[TYMProgressBarView alloc] initWithFrame:CGRectMake(86 , 80, [UIScreen mainScreen].bounds.size.width - 157, 8.0f)];
+    [self.contentBgView addSubview:self.progressBarView];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -45,7 +46,7 @@
     self.img.image = [UIImage imageNamed:taskEntity.imgName];
     self.downloadUrl = taskEntity.downLoadUrl;
     self.musicName.text = taskEntity.name;
-    self.musicDownloadProgress.progress = taskEntity.progress;
+    self.progressBarView.progress = taskEntity.progress;
     self.musicDownloadPercent.text =  [NSString stringWithFormat:@"%.3f",taskEntity.progress];
     
     if (taskEntity.taskDownloadState == TaskStateSuspended) {
@@ -58,7 +59,7 @@
     
     __weak typeof(self) weakSelf = self;
     taskEntity.progressBlock = ^(CGFloat progress, CGFloat totalMBRead, CGFloat totalMBExpectedToRead) {
-        weakSelf.musicDownloadProgress.progress = progress;
+        weakSelf.progressBarView.progress = progress;
         weakSelf.musicDownloadPercent.text = [NSString stringWithFormat:@"%.3f",progress];
     };
     

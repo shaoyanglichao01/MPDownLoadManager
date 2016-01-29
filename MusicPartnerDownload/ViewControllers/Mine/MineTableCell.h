@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "DRCellSlideGestureRecognizer.h"
 @interface MineTableCell : UITableViewCell
 
 
 @property (weak, nonatomic) IBOutlet UIImageView *img;
 @property (weak, nonatomic) IBOutlet UILabel *name;
 
+-(void)configurePanDelete:(DRCellSlideActionBlock)drCellSlideActionBlock;
 
 @end

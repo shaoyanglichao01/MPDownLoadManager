@@ -257,6 +257,11 @@
  */
 - (void)deleteFile:(NSString *)url{
     MusicPartnerDownloadTask *downLoadTask = [self getDownLoadTask:url];
+    
+    if (downLoadTask == nil) {
+        downLoadTask = [[MusicPartnerDownloadTask alloc ] init];
+    }
+    
     [downLoadTask deleteFile:url];
     [self.mpDownloadTasks removeObjectForKey:url];
     [self deleteMpDownLoadTask:url];

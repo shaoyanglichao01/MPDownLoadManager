@@ -11,13 +11,31 @@
 @implementation MineTableCell
 
 - (void)awakeFromNib {
-    // Initialization code
+
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 
-    // Configure the view for the selected state
 }
+
+-(void)configurePanDelete:(DRCellSlideActionBlock)drCellSlideActionBlock{
+    DRCellSlideGestureRecognizer *slideGestureRecognizer = [DRCellSlideGestureRecognizer new];
+    
+
+    UIColor *redColor = [UIColor colorWithRed:222/255.0 green:61/255.0 blue:14/255.0 alpha:1];
+  
+    DRCellSlideAction *triangleAction = [DRCellSlideAction actionForFraction:-0.25];
+    triangleAction.icon = [UIImage imageNamed:@"menu_delete"];
+    triangleAction.activeBackgroundColor = redColor;
+
+    triangleAction.behavior = DRCellSlideActionPushBehavior;
+    triangleAction.didTriggerBlock  = drCellSlideActionBlock;
+    
+    [slideGestureRecognizer addActions:@[triangleAction]];
+    
+    [self addGestureRecognizer:slideGestureRecognizer];
+}
+
 
 @end

@@ -34,20 +34,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="195" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="PMZ-yw-ve0">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="185" sectionHeaderHeight="10" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="PMZ-yw-ve0">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MineTableCell" rowHeight="195" id="7BX-Rf-l0q" customClass="MineTableCell">
-                                        <rect key="frame" x="0.0" y="65" width="320" height="195"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MineTableCell" rowHeight="185" id="7BX-Rf-l0q" customClass="MineTableCell">
+                                        <rect key="frame" x="0.0" y="114" width="320" height="185"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7BX-Rf-l0q" id="S7A-rE-I26">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="195"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="185"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8kP-Zw-U5o">
-                                                    <rect key="frame" x="0.0" y="10" width="320" height="185"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="185"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XkE-S5-cwU">
                                                             <rect key="frame" x="10" y="35" width="300" height="140"/>
@@ -87,7 +87,7 @@
                                             <constraints>
                                                 <constraint firstItem="8kP-Zw-U5o" firstAttribute="leading" secondItem="S7A-rE-I26" secondAttribute="leading" id="Wao-xZ-hjx"/>
                                                 <constraint firstAttribute="trailing" secondItem="8kP-Zw-U5o" secondAttribute="trailing" id="WpD-2j-a5I"/>
-                                                <constraint firstItem="8kP-Zw-U5o" firstAttribute="top" secondItem="S7A-rE-I26" secondAttribute="top" constant="10" id="XO2-Ax-1MX"/>
+                                                <constraint firstItem="8kP-Zw-U5o" firstAttribute="top" secondItem="S7A-rE-I26" secondAttribute="top" id="XO2-Ax-1MX"/>
                                                 <constraint firstAttribute="bottom" secondItem="8kP-Zw-U5o" secondAttribute="bottom" id="mku-6j-Mc4"/>
                                             </constraints>
                                         </tableViewCellContentView>
